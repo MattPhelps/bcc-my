@@ -1,4 +1,3 @@
-import { use } from 'react';
 import { fetchPost } from "@/lib/fetchPost";
 import type { Metadata, ResolvingMetadata } from "next";
 import striptags from "striptags";
@@ -10,34 +9,34 @@ import Tags from "@/components/Posts/tags";
 import Sidebar from "@/components/Posts/sidebar";
 
 // Define the `generateMetadata` function
-// export async function generateMetadata(
-//   { params }: { params: { slug: string } },
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   const { slug } = params;
-//   const data = await fetchPost(slug);
-
-//   if (!data.post) {
-//     return {
-//       title: "Post Not Found",
-//       description: "This post does not exist.",
-//     };
-//   }
-
-//   const { post } = data;
-
-//   // Strip HTML tags from the description and limit its length
-//   const cleanDescription = striptags(post.excerpt).substring(0, 160);
-
-//   return {
-//     title: post.title,
-//     description: cleanDescription,
-//   };
-// }
-
-export default  function PostPage({ params }) {
+export async function generateMetadata(
+  { params }: { params: { slug: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = params;
-  const data = use(fetchPost(slug));
+  const data = await fetchPost(slug);
+
+  if (!data.post) {
+    return {
+      title: "Post Not Found",
+      description: "This post does not exist.",
+    };
+  }
+
+  const { post } = data;
+
+  // Strip HTML tags from the description and limit its length
+  const cleanDescription = striptags(post.excerpt).substring(0, 160);
+
+  return {
+    title: post.title,
+    description: cleanDescription,
+  };
+}
+
+export default async function PostPage({ params }) {
+  const { slug } = params;
+  const data = await fetchPost(slug);
 
   if (!data.post) {
     return <NotFound />;

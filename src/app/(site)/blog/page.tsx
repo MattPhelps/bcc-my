@@ -1,4 +1,3 @@
-import { use } from 'react';
 import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,9 +14,10 @@ export const metadata: Metadata = {
   description: pageDescription,
 };
 
+export const revalidate = 60;
 
-const BlogPage =  () => {
-  const initialPosts = use(fetchPosts()); // Fetch initial posts server-side
+const BlogPage = async () => {
+  const initialPosts = await fetchPosts(); // Fetch initial posts server-side
   const heroPost = initialPosts.edges[0]?.node;
   const morePosts = initialPosts.edges.slice(1);
  
