@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 60;
-
+ 
 const BlogPage = async () => {
   const initialPosts = await fetchPosts(); // Fetch initial posts server-side
   const heroPost = initialPosts.edges[0]?.node;
