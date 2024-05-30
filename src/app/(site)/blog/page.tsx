@@ -17,33 +17,36 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const BlogPage = async () => {
-  const initialPosts = await fetchPosts(); // Fetch initial posts server-side
-  const heroPost = initialPosts.edges[0]?.node;
-  const morePosts = initialPosts.edges.slice(1);
- 
-  return (
-    <>
-    {/* <Header /> */}
-    <div>
-      <section className="dark:bg-gray-100 dark:text-gray-800">
-        <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.featuredImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          <LoadMoreButton initialMorePosts={morePosts} pageInfo={initialPosts.pageInfo} />
+  try {
+    const initialPosts = await fetchPosts(); // Fetch initial posts server-side
+    const heroPost = initialPosts.edges[0]?.node;
+    const morePosts = initialPosts.edges.slice(1);
+
+    return (
+      <>
+        <div>
+          <section className="dark:bg-gray-100 dark:text-gray-800">
+            <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+              {heroPost && (
+                <HeroPost
+                  title={heroPost.title}
+                  coverImage={heroPost.featuredImage}
+                  date={heroPost.date}
+                  author={heroPost.author}
+                  slug={heroPost.slug}
+                  excerpt={heroPost.excerpt}
+                />
+              )}
+              <LoadMoreButton initialMorePosts={morePosts} pageInfo={initialPosts.pageInfo} />
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-    {/* <Footer /> */}
-    </>
-  );
+      </>
+    );
+  } catch (error) {
+    console.error('Failed to render BlogPage:', error);
+    return <div>Failed to load posts</div>;
+  }
 };
 
 export default BlogPage;
