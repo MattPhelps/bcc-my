@@ -8,9 +8,9 @@ export async function GET(request: NextRequest) {
         // console.log(searchParams);
         
         // const after = searchParams.get('after');
-        // const allPosts = await getAllPostsForHome(false, after); // Adjust based on your needs, e.g., preview mode from query params
-        const allPosts = await getAllPostsForHome(false, null);
-        
+        const { after } = Object.fromEntries(request.nextUrl.searchParams.entries());
+        const allPosts = await getAllPostsForHome(false, after); // Adjust based on your needs, e.g., preview mode from query params
+
         return new NextResponse(JSON.stringify(allPosts), {
             status: 200,
             headers: {
