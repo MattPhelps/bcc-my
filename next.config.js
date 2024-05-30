@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-      domains: ['https://inkgenblog.com'],
+      domains: ['inkgenblog.com'],
     },
     // Your other Next.js configuration options here
   };
