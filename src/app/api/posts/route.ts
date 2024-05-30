@@ -3,7 +3,8 @@ import { getAllPostsForHome } from "@/lib/api";
 
 export async function GET(request: NextRequest) {
     try {
-        const { searchParams } = request.nextUrl;
+        const { searchParams } = new URL(request.url);
+        // const { searchParams } = request.nextUrl;
         const after = searchParams.get('after');
         const allPosts = await getAllPostsForHome(false, after); // Adjust based on your needs, e.g., preview mode from query params
 
