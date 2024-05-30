@@ -9,30 +9,30 @@ import Tags from "@/components/Posts/tags";
 import Sidebar from "@/components/Posts/sidebar";
 
 // Define the `generateMetadata` function
-export async function generateMetadata(
-  { params }: { params: { slug: string } },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const { slug } = params;
-  const data = await fetchPost(slug);
+// export async function generateMetadata(
+//   { params }: { params: { slug: string } },
+//   parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//   const { slug } = params;
+//   const data = await fetchPost(slug);
 
-  if (!data.post) {
-    return {
-      title: "Post Not Found",
-      description: "This post does not exist.",
-    };
-  }
+//   if (!data.post) {
+//     return {
+//       title: "Post Not Found",
+//       description: "This post does not exist.",
+//     };
+//   }
 
-  const { post } = data;
+//   const { post } = data;
 
-  // Strip HTML tags from the description and limit its length
-  const cleanDescription = striptags(post.excerpt).substring(0, 160);
+//   // Strip HTML tags from the description and limit its length
+//   const cleanDescription = striptags(post.excerpt).substring(0, 160);
 
-  return {
-    title: post.title,
-    description: cleanDescription,
-  };
-}
+//   return {
+//     title: post.title,
+//     description: cleanDescription,
+//   };
+// }
 
 export default async function PostPage({ params }) {
   const { slug } = params;
