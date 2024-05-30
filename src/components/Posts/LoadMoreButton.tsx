@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { fetchPosts } from '@/lib/fetchPosts';
+// import { fetchPosts } from '@/lib/fetchPosts';
 import MoreStories from './more-stories';
 
 const LoadMoreButton = ({ initialMorePosts, pageInfo: initialPageInfo }) => {
@@ -9,13 +9,31 @@ const LoadMoreButton = ({ initialMorePosts, pageInfo: initialPageInfo }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
   
+    // const loadMorePosts = async () => {
+    //   if (loading) return;
+    //   setLoading(true);
+    //   setError(null);
+  
+    //   try {
+    //     const newPosts = await fetchPosts(pageInfo?.endCursor);
+    //     setPosts((prevPosts) => [...prevPosts, ...newPosts.edges]);
+    //     setPageInfo(newPosts.pageInfo);
+    //   } catch (error) {
+    //     console.error('Error fetching more posts:', error);
+    //     setError('Failed to load more posts. Please try again.');
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
+
     const loadMorePosts = async () => {
       if (loading) return;
       setLoading(true);
       setError(null);
   
       try {
-        const newPosts = await fetchPosts(pageInfo?.endCursor);
+        const response = await fetch(`/api/posts/load-more-posts?after=${pageInfo?.endCursor}`);
+        const newPosts = await response.json();
         setPosts((prevPosts) => [...prevPosts, ...newPosts.edges]);
         setPageInfo(newPosts.pageInfo);
       } catch (error) {

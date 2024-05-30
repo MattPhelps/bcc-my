@@ -104,7 +104,6 @@ export async function getAllPostsForHome(preview, after = null) {
       },
     }
   );
-  console.log('Posts data:', data);
   return data?.posts;
 }
 
