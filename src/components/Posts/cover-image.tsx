@@ -19,7 +19,9 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       width={500}  
       height={500}
       priority
-      className="rounded dark:bg-gray-500 w-full h-auto"
+      // className="rounded dark:bg-gray-500 w-full h-auto"
+      className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
+
     />
   );
 
