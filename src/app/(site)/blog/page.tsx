@@ -6,13 +6,13 @@ import HeroPost from "@/components/Posts/HeroPost";
 import LoadMoreButton from "@/components/Posts/LoadMoreButton";
 
 
-const pageTitle = `InkGen Blog`;
-const pageDescription = `Learn about tattoos!`;
+// const pageTitle = `InkGen Blog`;
+// const pageDescription = `Learn about tattoos!`;
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-};
+// export const metadata: Metadata = {
+//   title: pageTitle,
+//   description: pageDescription,
+// };
 
 export const revalidate = 10;
  
