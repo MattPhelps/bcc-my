@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { fetchPosts } from '@/lib/fetchPosts';
+// import { fetchPosts } from '@/lib/fetchPosts';
+import { fetchMorePosts } from '@/lib/fetchPosts';
 import MoreStories from './more-stories';
 
 const LoadMoreButton = ({ initialMorePosts, pageInfo: initialPageInfo }) => {
@@ -15,7 +16,8 @@ const LoadMoreButton = ({ initialMorePosts, pageInfo: initialPageInfo }) => {
       setError(null);
   
       try {
-        const newPosts = await fetchPosts(pageInfo?.endCursor);
+        // const newPosts = await fetchPosts(pageInfo?.endCursor);
+        const newPosts = await fetchMorePosts(pageInfo?.endCursor);
         setPosts((prevPosts) => [...prevPosts, ...newPosts.edges]);
         setPageInfo(newPosts.pageInfo);
       } catch (error) {
