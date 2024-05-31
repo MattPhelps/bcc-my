@@ -66,8 +66,8 @@ export async function getAllPostsWithSlug() {
   return data?.posts;
 }
 
-// export async function getAllPostsForHome(preview, after = null) {
-  export async function getAllPostsForHome(after: string | null = null) {
+export async function getAllPostsForHome(preview, after = null) {
+  
   const data = await fetchAPI(
     `
     query AllPosts($after: String) {
@@ -104,8 +104,8 @@ export async function getAllPostsWithSlug() {
     `,
     {
       variables: {
-        // onlyEnabled: !preview,
-        // preview,
+        onlyEnabled: !preview,
+        preview,
         after,
       },
     }
