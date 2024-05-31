@@ -14,7 +14,7 @@ import LoadMoreButton from "@/components/Posts/LoadMoreButton";
 //   description: pageDescription,
 // };
 
-export const revalidate = 10;
+// export const revalidate = 10;
  
 const BlogPage = async () => {
   const initialPosts = await fetchPosts(); // Fetch initial posts server-side
