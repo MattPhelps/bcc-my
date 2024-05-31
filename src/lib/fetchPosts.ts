@@ -14,7 +14,7 @@
 //     }
   
 //     return data;
-//   } 
+//   }
   
 export async function fetchPosts(cursor: string | null = null) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -36,7 +36,7 @@ export async function fetchPosts(cursor: string | null = null) {
     throw new Error('Invalid response structure');
   }
 
-  const data = await res.json(); 
+  const data = await res.json();
 
   if (!data.pageInfo) {
     console.error('Invalid response structure:', data);

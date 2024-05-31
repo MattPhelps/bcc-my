@@ -28,7 +28,7 @@ async function fetchAPI(query = "", { variables }: Record<string, any> = {}) {
   const json = await res.json();
   if (json.errors) {
     console.error(json.errors);
-    throw new Error("Failed to fetch API"); 
+    throw new Error("Failed to fetch API");
   }
   
   return json.data;
@@ -66,9 +66,7 @@ export async function getAllPostsWithSlug() {
   return data?.posts;
 }
 
-// export async function getAllPostsForHome(preview, after = null) {
-  export async function getAllPostsForHome(after: string | null = null) {
-
+export async function getAllPostsForHome(preview, after = null) {
   const data = await fetchAPI(
     `
     query AllPosts($after: String) {
@@ -105,8 +103,8 @@ export async function getAllPostsWithSlug() {
     `,
     {
       variables: {
-        // onlyEnabled: !preview,
-        // preview,
+        onlyEnabled: !preview,
+        preview,
         after,
       },
     }
@@ -114,16 +112,15 @@ export async function getAllPostsWithSlug() {
   return data?.posts;
 }
 
-// export async function getPostAndMorePosts(slug, preview, previewData) {
-  export async function getPostAndMorePosts(slug: string) {
-  // const postPreview = preview && previewData?.post;
-  // // The slug may be the id of an unpublished post
-  // const isId = Number.isInteger(Number(slug));
-  // const isSamePost = isId
-  //   ? Number(slug) === postPreview.id
-  //   : slug === postPreview.slug;
-  // const isDraft = isSamePost && postPreview?.status === "draft";
-  // const isRevision = isSamePost && postPreview?.status === "publish";
+export async function getPostAndMorePosts(slug, preview, previewData) {
+  const postPreview = preview && previewData?.post;
+  // The slug may be the id of an unpublished post
+  const isId = Number.isInteger(Number(slug));
+  const isSamePost = isId
+    ? Number(slug) === postPreview.id
+    : slug === postPreview.slug;
+  const isDraft = isSamePost && postPreview?.status === "draft";
+  const isRevision = isSamePost && postPreview?.status === "publish";
   const data = await fetchAPI(
     `
     fragment AuthorFields on User {
@@ -164,10 +161,31 @@ export async function getAllPostsWithSlug() {
         }
       }
     }
-    query PostBySlug($slug: String!) {
-      postBy(slug: $slug) {
+    query PostBySlug($id: ID!, $idType: PostIdType!) {
+      post(id: $id, idType: $idType) {
         ...PostFields
         content
+        ${
+          // Only some of the fields of a revision are considered as there are some inconsistencies
+          isRevision
+            ? `
+        revisions(first: 1, where: { orderby: { field: MODIFIED, order: DESC } }) {
+          edges {
+            node {
+              title
+              excerpt
+              content
+              author {
+                node {
+                  ...AuthorFields
+                }
+              }
+            }
+          }
+        }
+        `
+            : ""
+        }
       }
       posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
         edges {
@@ -180,22 +198,21 @@ export async function getAllPostsWithSlug() {
   `,
     {
       variables: {
-        slug,
-        // id: isDraft ? postPreview.id : slug,
-        // idType: isDraft ? "DATABASE_ID" : "SLUG",
+        id: isDraft ? postPreview.id : slug,
+        idType: isDraft ? "DATABASE_ID" : "SLUG",
       },
     },
   );
 
   // Draft posts may not have an slug
-  // if (isDraft) data.post.slug = postPreview.id;
-  // // Apply a revision (changes in a published post)
-  // if (isRevision && data.post.revisions) {
-  //   const revision = data.post.revisions.edges[0]?.node;
+  if (isDraft) data.post.slug = postPreview.id;
+  // Apply a revision (changes in a published post)
+  if (isRevision && data.post.revisions) {
+    const revision = data.post.revisions.edges[0]?.node;
 
-  //   if (revision) Object.assign(data.post, revision);
-  //   delete data.post.revisions;
-  // }
+    if (revision) Object.assign(data.post, revision);
+    delete data.post.revisions;
+  }
 
   // Filter out the main post
   data.posts.edges = data.posts.edges.filter(({ node }) => node.slug !== slug);
