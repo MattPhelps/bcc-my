@@ -4,11 +4,11 @@ async function fetchAPI(query = "", { variables }: Record<string, any> = {}) {
   const headers = { "Content-Type": "application/json" };
 
 
-  if (process.env.WORDPRESS_AUTH_REFRESH_TOKEN) {
-    headers[
-      "Authorization"
-    ] = `Bearer ${process.env.WORDPRESS_AUTH_REFRESH_TOKEN}`;
-  }
+  // if (process.env.WORDPRESS_AUTH_REFRESH_TOKEN) {
+  //   headers[
+  //     "Authorization"
+  //   ] = `Bearer ${process.env.WORDPRESS_AUTH_REFRESH_TOKEN}`;
+  // }
 
   // WPGraphQL Plugin must be enabled
   const res = await fetch(API_URL, {
@@ -19,6 +19,11 @@ async function fetchAPI(query = "", { variables }: Record<string, any> = {}) {
       variables,
     }),
   });
+
+  if (!res.ok) {
+    console.error(`Failed to fetch API: ${res.statusText}`);
+    throw new Error("Failed to fetch API");
+  }
 
   const json = await res.json();
   if (json.errors) {
@@ -61,7 +66,8 @@ export async function getAllPostsWithSlug() {
   return data?.posts;
 }
 
-export async function getAllPostsForHome(preview, after = null) {
+// export async function getAllPostsForHome(preview, after = null) {
+  export async function getAllPostsForHome(after: string | null = null) {
   const data = await fetchAPI(
     `
     query AllPosts($after: String) {
@@ -98,8 +104,8 @@ export async function getAllPostsForHome(preview, after = null) {
     `,
     {
       variables: {
-        onlyEnabled: !preview,
-        preview,
+        // onlyEnabled: !preview,
+        // preview,
         after,
       },
     }

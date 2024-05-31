@@ -1,20 +1,20 @@
-// import { Metadata } from "next";
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+import { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { fetchPosts } from "@/lib/fetchPosts";
 import HeroPost from "@/components/Posts/HeroPost";
 import LoadMoreButton from "@/components/Posts/LoadMoreButton";
 
 
-// const pageTitle = `InkGen Blog`;
-// const pageDescription = `Learn about tattoos!`;
+const pageTitle = `InkGen Blog`;
+const pageDescription = `Learn about tattoos!`;
 
-// export const metadata: Metadata = {
-//   title: pageTitle,
-//   description: pageDescription,
-// };
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+};
 
-// export const revalidate = 10;
+export const revalidate = 10;
  
 const BlogPage = async () => {
   const initialPosts = await fetchPosts(); // Fetch initial posts server-side
@@ -34,7 +34,7 @@ const BlogPage = async () => {
               date={heroPost.date}
               author={heroPost.author}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt} 
+              excerpt={heroPost.excerpt}
             />
           )}
           <LoadMoreButton initialMorePosts={morePosts} pageInfo={initialPosts.pageInfo} />
