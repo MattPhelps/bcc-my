@@ -14,7 +14,7 @@
 //     }
   
 //     return data;
-//   }
+//   } 
   
 export async function fetchPosts(cursor: string | null = null) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
