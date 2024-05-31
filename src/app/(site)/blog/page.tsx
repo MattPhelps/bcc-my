@@ -1,6 +1,6 @@
-import { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import { Metadata } from "next";
+// import Header from "@/components/Header";
+// import Footer from "@/components/Footer";
 import { fetchPosts } from "@/lib/fetchPosts";
 import HeroPost from "@/components/Posts/HeroPost";
 import LoadMoreButton from "@/components/Posts/LoadMoreButton";
