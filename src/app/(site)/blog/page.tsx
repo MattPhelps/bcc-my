@@ -17,24 +17,24 @@ export const metadata: Metadata = {
 export const revalidate = 10;
  
 const BlogPage = async () => {
-  // const initialPosts = await fetchPosts(); // Fetch initial posts server-side
-  // const heroPost = initialPosts.edges[0]?.node;
-  // const morePosts = initialPosts.edges.slice(1);
-
-  let initialPosts;
-  try {
-    initialPosts = await fetchPosts(); // Fetch initial posts server-side
-  } catch (error) {
-    console.error('Failed to fetch posts during static generation:', error);
-    return (
-      <>
-        <div>Error loading posts.</div>
-      </>
-    );
-  }
-
+  const initialPosts = await fetchPosts(); // Fetch initial posts server-side
   const heroPost = initialPosts.edges[0]?.node;
   const morePosts = initialPosts.edges.slice(1);
+
+  // let initialPosts;
+  // try {
+  //   initialPosts = await fetchPosts(); // Fetch initial posts server-side
+  // } catch (error) {
+  //   console.error('Failed to fetch posts during static generation:', error);
+  //   return (
+  //     <>
+  //       <div>Error loading posts.</div>
+  //     </>
+  //   );
+  // }
+
+  // const heroPost = initialPosts.edges[0]?.node;
+  // const morePosts = initialPosts.edges.slice(1);
  
   return (
     <>
