@@ -34,7 +34,7 @@ const BlogPage = async () => {
               date={heroPost.date}
               author={heroPost.author}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+              excerpt={heroPost.excerpt} 
             />
           )}
           <LoadMoreButton initialMorePosts={morePosts} pageInfo={initialPosts.pageInfo} />
