@@ -45,3 +45,7 @@ export async function fetchPosts(cursor: string | null = null) {
 
   return data;
 }
+
+export async function fetchMorePosts(cursor: string) {
+  return await fetchPosts(cursor);
+}
