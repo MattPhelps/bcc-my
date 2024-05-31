@@ -17,11 +17,8 @@
 //   }
   
 export async function fetchPosts(cursor: string | null = null) {
-  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const baseUrl = "https://inkgen.ai"
-  // const url = cursor ? `${baseUrl}/api/posts?after=${cursor}` : `${baseUrl}/api/posts`;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const url = cursor ? `${baseUrl}/api/posts?after=${cursor}` : `${baseUrl}/api/posts`;
-
   
   console.log(`Fetching posts from: ${url}`); // Log the URL
 
