@@ -5,7 +5,7 @@ export async function fetchPosts(cursor: string | null = null) {
   
     if (!res.ok) {
       throw new Error('Failed to fetch posts');
-    }
+    } 
   
     const data = await res.json();
   
