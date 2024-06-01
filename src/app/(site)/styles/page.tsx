@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 const StylesPage = () => {
-
   return (
     <>
       <section className="pt-3 pb-25">
