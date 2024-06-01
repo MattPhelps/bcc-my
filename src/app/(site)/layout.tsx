@@ -50,7 +50,6 @@
 
 // export default RootLayout;
 
-
 "use client";
 import React, { useState } from "react";
 import "../../styles/animate.css";
@@ -60,7 +59,6 @@ import { GA_TRACKING_ID, pageview } from '../../../analytics';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { usePathname } from 'next/navigation';
-
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -107,4 +105,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

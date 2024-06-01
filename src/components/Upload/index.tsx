@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import siteConfig from "../../../siteConfig";
 import React, { useEffect, useState, useRef } from "react";
-import UploadDropzone from "../UploadDropzone/uploadDropzone";
 import Render from "../Render/render";
 
 const Upload = () => {
