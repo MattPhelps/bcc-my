@@ -55,13 +55,15 @@ import React, { useState } from "react";
 import "../../styles/animate.css";
 import "../../styles/tailwind.css";
 import siteConfig from '../../../siteConfig';
-import { GA_TRACKING_ID, pageview } from '../../../analytics';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { usePathname } from 'next/navigation';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+
+ const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
+
   
   // Define the paths where the header and footer should not be shown
   const noHeaderFooterPaths = ['/design', '/login', '/signup'];
