@@ -3,8 +3,6 @@ import { Metadata } from "next";
 import siteConfig from '../../../../siteConfig';
 import PageTitle from "../../../components/Common/PageTitle";
 import SinglePricing from "@/components/Pricing/SinglePricing";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const pageTitle = `DMCA Copyright Infringement Notification`;
 const pageDescription = `Read our comprehensive DMCA disclaimer to understand how to file a copyright infringement. We clarify our responsibilities and user obligations to ensure informed and lawful use of our website.`;
@@ -18,7 +16,6 @@ const DMCAPage = () => {
 
   return (
     <>
-    <Header />
       <section className="pt-3 pb-25">
         <div className="max-w-[1170px] text-[#0e1318]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
           
@@ -43,7 +40,6 @@ const DMCAPage = () => {
         </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

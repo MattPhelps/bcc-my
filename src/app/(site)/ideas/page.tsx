@@ -3,8 +3,6 @@ import Button from '@/components/Common/Button';
 import { Metadata } from "next";
 import { ideasData, placementIdeasData, popularIdeasData } from "./ideasData";
 import IdeaGrid from "@/components/IdeaGrid";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const pageTitle = `Tattoo Ideas`;
 const pageSlug = `/ideas`;
@@ -18,7 +16,6 @@ const IdeasPage = () => {
 
   return (
     <>
-    <Header />
       <section className="pt-3 pb-25">
         <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
           <PageTitle title="Tattoo Ideas"  paragraph="Your next tattoo idea is waiting for you. Here you will find thousands of popular tattoo concepts for your next ink session. Browse through thousands of high-quality designs and discover the perfect tattoo that suits your personality and style."   />
@@ -47,7 +44,6 @@ const IdeasPage = () => {
 
         </div>
       </section>
-      <Footer />
     </>
   );
 };

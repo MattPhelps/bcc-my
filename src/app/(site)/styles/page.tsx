@@ -3,8 +3,6 @@ import Link from "next/link";
 import PageTitle from "../../../components/Common/PageTitle";
 import { stylesData } from "./stylesData";
 import Button from '@/components/Common/Button';
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const pageTitle = `Tattoo Styles Chart`;
 const pageDescription = `Design your own tattoos!`;
@@ -18,7 +16,6 @@ const StylesPage = () => {
 
   return (
     <>
-    <Header />
       <section className="pt-3 pb-25">
         <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
           <PageTitle title="Tattoo Styles" paragraph="InkGen can generate design in many different tattoo styles. From intricate dotwork to minimalist sketches, from bold blackwork to broad-stroked watercolor tattoos - our AI-powered tattoo generator will create designs in the style that you love. Browse through our catalog of styles and discover the one you connect with the most." />
@@ -49,7 +46,6 @@ const StylesPage = () => {
 
         </div>
       </section>
-      <Footer />
     </>
   );
 };

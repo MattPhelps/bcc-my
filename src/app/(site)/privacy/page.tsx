@@ -2,8 +2,6 @@ import SupportSection from "@/components/Support";
 import { Metadata } from "next";
 import siteConfig from '../../../../siteConfig';
 import PageTitle from "../../../components/Common/PageTitle";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const pageTitle = `Privacy Policy`;
 const pageDescription = `Prioritize your privacy while using our services. Our Privacy Policy outlines how we protect your data and respect user confidentiality.`;
@@ -16,7 +14,6 @@ export const metadata: Metadata = {
 const PrivacyPage = () => {
   return (
     <>
-    <Header />
       <section className="pt-3 pb-25">
         <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
           <PageTitle title="Privacy Policy" paragraph={siteConfig.lastUpdated} />
@@ -82,7 +79,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

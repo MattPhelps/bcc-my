@@ -7,8 +7,6 @@ import Reviews from "@/components/Home/Reviews";
 import Faq from "@/components/Faq";
 import CallToAction from "@/components/CallToAction";
 import homeFaqData from '@/components/Faq/faqData';
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
 
 
 const pageTitle = `${siteConfig.siteTitle}`;
@@ -22,7 +20,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
       <Hero/>
       <Features />
        <section className="relative z-20 overflow-hidden pb-20 pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45">
@@ -30,7 +27,6 @@ export default function Home() {
       </section> 
       <Faq data={homeFaqData} />
       <CallToAction />
-      {/* <Footer /> */}
     </>
   );
 }
