@@ -49,6 +49,7 @@ export default async function PostPage({ params }) {
     //  <!-- Blog Article -->
     <>
       <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="content-container">
         <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6">
           <div className="lg:col-span-2">
             <div className="py-8 lg:pe-8">
@@ -82,6 +83,7 @@ export default async function PostPage({ params }) {
           {/* <!-- End Content --> */}
           <Sidebar posts={morePosts} />
         </div>
+      </div>
       </div>
     </>
   );

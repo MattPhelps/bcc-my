@@ -24,7 +24,6 @@ const BlogPage = async () => {
     <div>
       <section className="dark:bg-gray-100 dark:text-gray-800">
         <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-        <div className="content-container">
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -36,7 +35,6 @@ const BlogPage = async () => {
             />
           )}
           <LoadMoreButton initialMorePosts={morePosts} pageInfo={initialPosts.pageInfo} />
-        </div>
         </div>
       </section>
     </div>
