@@ -24,8 +24,6 @@ const AboutPage = () => {
             <p>We understand that choosing the right tattoo design can be challenging, and that's where InkGen comes in. Our platform uses cutting-edge AI tech to generate custom designs that match your individual style and preferences.</p>
             <br></br>
             <p>At InkGen, we believe that the tattoo experience should be seamless and enjoyable from start to finish. So whether you're a tattoo enthusiast, a first-timer, or a tattoo artist, we invite you to  <a href="/ideas">explore what InkGen has to offer.</a></p>
-            <br></br>
-            <p>– Matt Phelps</p>
             <br></br>    
             <h2 className="mt-8 text-2xl font-bold">Thanks for Joining the InkGen Community!</h2>
             <br></br>    
