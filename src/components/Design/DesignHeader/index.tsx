@@ -69,7 +69,7 @@ const DesignHeader = ({ selectedTab, setSelectedTab }) => {
             </nav>
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
               <Button
-                href=""
+                href="contact"
                 bgColor="bg-[#f3f3f3]"
                 hoverColor="hover:bg-[#e1e4e6]"
                 textColor="text-[#000]"
