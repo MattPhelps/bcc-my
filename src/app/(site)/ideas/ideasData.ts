@@ -7,7 +7,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Sleeve",
         image: "/styles/abstract.png",
         description: "",
-        slug: "sleeve",
+        slug: "/sleeve",
         count: 0,
     },
     {
@@ -16,7 +16,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Back",
         image: "/styles/abstract.png",
         description: "",
-        slug: "back",
+        slug: "/back",
         count: 0,
     },
     {
@@ -25,7 +25,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Hand",
         image: "/styles/abstract.png",
         description: "",
-        slug: "hand",
+        slug: "/hand",
         count: 0,
     },
     {
@@ -34,7 +34,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Finger",
         image: "/styles/abstract.png",
         description: "",
-        slug: "finger",
+        slug: "/finger",
         count: 0,
     },
     {
@@ -43,7 +43,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Forearm",
         image: "/styles/abstract.png",
         description: "",
-        slug: "forearm",
+        slug: "/forearm",
         count: 0,
     },
     {
@@ -52,7 +52,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Neck",
         image: "/styles/abstract.png",
         description: "",
-        slug: "neck",
+        slug: "/neck",
         count: 0,
     },
     {
@@ -61,7 +61,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Arm",
         image: "/styles/abstract.png",
         description: "",
-        slug: "arm",
+        slug: "/arm",
         count: 0,
     },
     {
@@ -70,7 +70,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Sternum",
         image: "/styles/abstract.png",
         description: "",
-        slug: "sternum",
+        slug: "/sternum",
         count: 0,
     },
     {
@@ -79,7 +79,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Eye Tattoo",
         image: "/styles/abstract.png",
         description: "",
-        slug: "eye",
+        slug: "/eye",
         count: 0,
     },
     {
@@ -88,7 +88,7 @@ export const placementIdeasData: Ideas[] = [
         label: "Shoulder Tattoo",
         image: "/styles/abstract.png",
         description: "",
-        slug: "shoulder",
+        slug: "/shoulder",
         count: 0,
     },
 ]
@@ -101,7 +101,7 @@ export const popularIdeasData: Ideas[] = [
         label: "butterfly",
         image: "/styles/abstract.png",
         description: "",
-        slug: "butterfly",
+        slug: "/butterfly",
         count: 0,
     },
     {
@@ -110,7 +110,7 @@ export const popularIdeasData: Ideas[] = [
         label: "For Men",
         image: "/styles/abstract.png",
         description: "",
-        slug: "men",
+        slug: "/men",
         count: 0,
     },
     {
@@ -119,7 +119,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Medusa",
         image: "/styles/abstract.png",
         description: "",
-        slug: "medusa",
+        slug: "/medusa",
         count: 0,
     },
     {
@@ -128,7 +128,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Minimalist",
         image: "/styles/abstract.png",
         description: "",
-        slug: "minimalist",
+        slug: "/minimalist",
         count: 0,
     },
     {
@@ -137,7 +137,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Semicolon",
         image: "/styles/abstract.png",
         description: "",
-        slug: "semicolon",
+        slug: "/semicolon",
         count: 0,
     },
     {
@@ -146,7 +146,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Snake",
         image: "/styles/abstract.png",
         description: "",
-        slug: "snake",
+        slug: "/snake",
         count: 0,
     },
     {
@@ -155,7 +155,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Small Tattoos",
         image: "/styles/abstract.png",
         description: "",
-        slug: "small",
+        slug: "/small",
         count: 0,
     },
     {
@@ -164,7 +164,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Dragon Tattoos",
         image: "/styles/abstract.png",
         description: "",
-        slug: "dragon",
+        slug: "/dragon",
         count: 0,
     },
     {
@@ -173,7 +173,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Memento Mori",
         image: "/styles/abstract.png",
         description: "",
-        slug: "memento-mori",
+        slug: "/memento-mori",
         count: 0,
     },
     {
@@ -182,7 +182,7 @@ export const popularIdeasData: Ideas[] = [
         label: "Cat",
         image: "/styles/abstract.png",
         description: "",
-        slug: "cat",
+        slug: "/cat",
         count: 0,
     },
 ]
@@ -196,7 +196,7 @@ export const ideasData: Ideas[] = [
         label: "For Women",
         image: "/styles/abstract.png",
         description: "",
-        slug: "women",
+        slug: "/women",
         count: 0,
     },
     {
@@ -205,7 +205,7 @@ export const ideasData: Ideas[] = [
         label: "Sleeve",
         image: "/styles/abstract.png",
         description: "",
-        slug: "sleeve",
+        slug: "/sleeve",
         count: 0,
     },
     {
@@ -214,7 +214,7 @@ export const ideasData: Ideas[] = [
         label: "Small",
         image: "/styles/abstract.png",
         description: "",
-        slug: "small",
+        slug: "/small",
         count: 0,
     },
     {
@@ -223,7 +223,7 @@ export const ideasData: Ideas[] = [
         label: "Fine Line",
         image: "/styles/abstract.png",
         description: "",
-        slug: "fine-line",
+        slug: "/fine-line",
         count: 0,
     },
     {
@@ -232,7 +232,7 @@ export const ideasData: Ideas[] = [
         label: "Forearm",
         image: "/styles/abstract.png",
         description: "",
-        slug: "forearm",
+        slug: "/forearm",
         count: 0,
     },
 ]

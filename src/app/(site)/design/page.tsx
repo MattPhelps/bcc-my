@@ -18,20 +18,23 @@ export const metadata: Metadata = {
 const DesignPage = () => {
   return (
     <>
-      <DesignHeader />
+      <div className="min-h-screen flex flex-col">
+        <DesignHeader />
+        
+        {/* All design input fields here on the left */}
+        <div className="flex flex-grow">
+          <div className="bg-[#252627] w-1/4 p-6 flex flex-col">
+            <DesignDescription />
+            <DesignStyle />
+            <DesignColor />
+            <DesignButton />
+          </div>
 
- {/* All design input fields here on the left */}
-      <div className="flex h-screen"> 
-        <div className="bg-[#252627] w-1/4 p-6">
-          <DesignDescription />
-          <DesignStyle />
-          <DesignColor />
-          <DesignButton />
+          {/* The rendering of the output of the AI generator is here on the right */}
+          <div className="bg-white w-3/4 flex flex-col">
+            <DesignRender />
+          </div>
         </div>
-
-{/* The rendering of the output of the AI generator is here on the right */}
-        <div className="bg-white w-3/4"></div>
-        <DesignRender />
       </div>
     </>
   );
