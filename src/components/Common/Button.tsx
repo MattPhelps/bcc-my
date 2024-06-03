@@ -12,7 +12,7 @@ const Button = ({
   return (
     <div className="wow fadeInUp text-center">
       <Link href={href}>
-        <div style={style} className={` inline-flex rounded-lg py-3 px-5 ${textColor} font-medium text-l duration-100 ease-in ${bgColor} ${hoverColor} ${className}`}>
+        <div style={style} className={`inline-flex rounded-lg py-3 px-5 ${textColor} font-medium text-l duration-100 ease-in ${bgColor} ${hoverColor} ${className}`}>
           {children}
         </div>
       </Link>
