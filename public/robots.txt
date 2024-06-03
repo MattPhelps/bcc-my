@@ -8,5 +8,6 @@
 User-agent: *
 Disallow: /login
 Disallow: /signup
+Disallow: /design/
 
-Sitemap: https://www.inkgen.ai/sitemap.xml
+Sitemap: https://inkgen.ai/sitemap.xml
