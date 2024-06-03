@@ -86,6 +86,23 @@ const Header = () => {
               > 
               </ul>
             </nav>
+
+            {/* Remove once auth has been built */}
+
+            <div className="flex items-center gap-6 mt-7 lg:mt-0">
+            <Button
+                href="/design"
+                bgColor="bg-[#8b3eff]"
+                hoverColor="hover:bg-[#7731d8]"
+                textColor="text-[#fff]"
+                style={{ }}
+                className=""
+              >
+                Create a Design
+              </Button>
+            </div>
+
+        
      {/*
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
 
