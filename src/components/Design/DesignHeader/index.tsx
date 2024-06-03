@@ -70,26 +70,26 @@ const DesignHeader = () => {
             <nav>
               <ul className={`flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2 lg:py-3`}></ul> {/* Adjusted padding */}
             </nav>
-{/* 
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
                <Button
                
-                href="/login"
+                href="/contact"
                 bgColor="bg-[#f3f3f3]"
                 hoverColor="hover:bg-[#e1e4e6]"
                 textColor="text-[#000]"
                 style={{ }}
                 className="flex items-center justify-center gap-2"
               >
+                {/* 
                 <img 
                 src="images/icons/download.png" 
                 alt="Download Icon" 
                 style={{ width: 24, height: 24, verticalAlign: 'middle' }} 
               />
-                Download
+              */}
+                🙏 Leave Feedback
               </Button>
             </div>
-*/}
           </div>
         </div>
       </header>

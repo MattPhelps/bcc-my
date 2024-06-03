@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import React from 'react';
 import PageTitle from "../../../components/Common/PageTitle";
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+
 
 const pageTitle = `Signup to InkGen`;
 const pageDescription = `Design your own tattoos!`;
