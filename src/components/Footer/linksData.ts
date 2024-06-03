@@ -59,5 +59,11 @@ export const resourceLink: FooterLink[] = [
     title: "Blog",
     href: "blog",
     newTab: false,
-  }
+  },
+  {
+    id: 9,
+    title: "Random Ideas Generator",
+    href: "random",
+    newTab: false,
+  },
 ];
