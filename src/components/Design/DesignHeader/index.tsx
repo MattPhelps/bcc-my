@@ -11,7 +11,7 @@ const DesignHeader = () => {
 
   return (
     <>
-      <header className="left-0 top-0 w-full z-9999 shadow !py-2 lg:!py-0 transition duration-100 top-0"
+      <header className="left-0 top-0 w-full z-9999 shadow !py-1 lg:!py-1 transition duration-100 top-0"
           style={{ backgroundImage: 'linear-gradient(to right, #08c3cc, #7d2ae8)' }}>
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 lg:flex items-center justify-between relative">
           <div className="w-full text-white text-xl font-bold lg:w-1/4 flex items-center justify-between">
@@ -23,7 +23,7 @@ const DesignHeader = () => {
                 height={24}
                 className="mr-2"
               />
-              <h2 className="inline-block text-[white]">
+              <h2 className="inline-block text-[white] lg:py-3">
                 InkGen
               </h2>
             </Link>
@@ -44,7 +44,7 @@ const DesignHeader = () => {
             <nav>
               <ul className="flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2">
                 {designMenuData.map((menuItem, key) => (
-                  <li key={key} className="nav__menu group relative lg:py-7">
+                  <li key={key} className="nav__menu group relative lg:py-3">
                     {menuItem.submenu ? (
                       <>
 
@@ -68,9 +68,9 @@ const DesignHeader = () => {
             </nav>
 
             <nav>
-              <ul className={`flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2 lg:py-10 `}></ul>
+              <ul className={`flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2 lg:py-3`}></ul> {/* Adjusted padding */}
             </nav>
-
+{/* 
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
                <Button
                
@@ -89,6 +89,7 @@ const DesignHeader = () => {
                 Download
               </Button>
             </div>
+*/}
           </div>
         </div>
       </header>
