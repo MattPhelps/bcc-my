@@ -26,7 +26,7 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
   }
 
-    /* FOR ALL PAGES WITH CONTENT */
+    /* FOR ALL PAGES WITH TEXT CONTENT */
   .content-container {
     max-width: 700px; 
     margin: 0 auto; 
@@ -39,14 +39,24 @@
   }
 
   .content-container p {
-    color: #0e1318;
+    color: #000000CC;
   }
-
 
   .content-container a {
-    color: #1ec9d0;
+    color: rgba(0, 186, 255, 0.8);
     text-decoration: underline; 
   }
+
+.content-container h1, 
+.content-container h2, 
+.content-container h3, 
+.content-container h4, 
+.content-container h5 {
+  color: #000 !important;
+}
+
+
+  /* END text color styling */
 
   .hero-bg {
     background: linear-gradient(

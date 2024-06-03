@@ -16,8 +16,8 @@ const SignupPage = () => {
     return (
       <>
       {/* <Header /> */}
-        <section className="relative pt-3 pb-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/auth/background.jpeg')", position: 'relative' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
+        <section className="relative pt-3 pb-25 bg-cover bg-center" style={{ backgroundImage: "url('/images/auth/background.png')", position: 'relative' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.1)' }}></div>
             
           <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
             <div className="form-box-gradient-light relative overflow-hidden rounded-[25px] bg-dark p-6 sm:p-8 xl:p-15 w-1/2 mx-auto">

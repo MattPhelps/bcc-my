@@ -22,7 +22,7 @@ const Footer = () => {
                 
               </div>
 
-              <p className={`mb-6 xl:w-4/5 text-[#0e1318]`}>
+              <p className={`mb-6 xl:w-4/5 text-[black]/80`}>
               InkGen is an AI tattoo generator tool that will help you design the tattoo of your dreams.
               </p>
             
@@ -149,7 +149,7 @@ const Footer = () => {
 
               </div>
 
-              <p style={{ fontSize: '12px' }} className={`mt-6 text-[#0e1318] font-small"`}>
+              <p style={{ fontSize: '12px' }} className={`mt-6 text-[black]/80 font-small"`}>
                © 2024 All Rights Reserved, InkGen
               </p>
             </div>

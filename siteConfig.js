@@ -7,7 +7,6 @@ const siteConfig = {
   emailFormLink: "https://formspree.io/f/xwkgkdjq",
   buttonColor: "#8b3eff",
   linkColor: "#1ec9d0",
-  textColor: "#0e1318",
   supportEmail: "help@inkgen.ai",
   lastUpdated: "April 12th, 2024"
 };
