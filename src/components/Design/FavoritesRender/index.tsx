@@ -10,8 +10,16 @@ const handleDownload = (url, filename) => {
   document.body.removeChild(link);
 };
 
-const DesignRender = () => {
+const FavoritesRender = () => {
   const images = [
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
+    { src: '/styles/3d.png', filename: '3d.png' },
     { src: '/styles/3d.png', filename: '3d.png' },
     { src: '/styles/3d.png', filename: '3d.png' },
     { src: '/styles/3d.png', filename: '3d.png' },
@@ -19,15 +27,19 @@ const DesignRender = () => {
   ];
 
   return (
-    <div className="p-6 grid grid-cols-2 gap-4 h-full w-full">
+    <div className="p-6 grid grid-cols-4 gap-4 h-full w-full">
       {images.map((image, index) => (
-        <div key={index} className="relative group h-full">
-          <img src={image.src} alt={`Tattoo Design ${index + 1}`} className="w-full h-full object-cover border border-gray-300 rounded" />
+        <div key={index} className="relative group">
+          <img
+            src={image.src}
+            alt={`Tattoo Design ${index + 1}`}
+            className="w-full h-auto max-w-full max-h-[200px] object-cover border border-gray-300 rounded"
+          />
           <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white transition-opacity duration-300">
           </div>
           <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
             <button 
-              className="bg-white text-[black] px-3 py-1 rounded border border-black flex items-center space-x-2"
+              className="bg-white text-black px-3 py-1 rounded border border-black flex items-center space-x-2"
               onClick={() => handleDownload(image.src, image.filename)}
             >
               <img 
@@ -44,4 +56,4 @@ const DesignRender = () => {
   );
 };
 
-export default DesignRender;
+export default FavoritesRender;
