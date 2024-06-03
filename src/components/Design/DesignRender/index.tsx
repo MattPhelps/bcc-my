@@ -11,6 +11,7 @@ const handleDownload = (url, filename) => {
 };
 
 const DesignRender = () => {
+  
   const images = [
     { src: '/styles/3d.png', filename: '3d.png' },
     { src: '/styles/3d.png', filename: '3d.png' },

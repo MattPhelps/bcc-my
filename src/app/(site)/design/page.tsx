@@ -20,7 +20,6 @@ const DesignPage = () => {
       <div className="min-h-screen h-screen flex flex-col overflow-hidden">
         <DesignHeader selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
-        {/* Tab Content */}
         <div className="flex flex-grow overflow-hidden">
           <div className="bg-[#252627] w-1/4 p-6 flex flex-col overflow-y-auto">
             <DesignDescription />
