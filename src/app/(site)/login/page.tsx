@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import React from 'react';
 import PageTitle from "../../../components/Common/PageTitle";
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
 
 const pageTitle = `Login to your InkGen account`;
 const pageDescription = `Design your own tattoos!`;
@@ -63,7 +61,6 @@ const LoginPage = () => {
             </div>
           </div>
         </section>
-        {/* <Footer /> */}
       </>
     );
 };
