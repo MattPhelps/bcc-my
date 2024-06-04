@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAllPostsForHome } from "@/lib/api";
+import { getAllPostsForHome } from "@/libs/api";
 
 export async function GET(request: NextRequest) {
   // const { searchParams } = new URL(request.url);

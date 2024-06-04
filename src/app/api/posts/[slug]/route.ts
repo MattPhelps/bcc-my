@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getPostAndMorePosts } from '@/lib/api';
+import { getPostAndMorePosts } from '@/libs/api';
 
 export async function GET(request: NextRequest, { params }) {
     const { slug } = params;

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { fetchPosts } from "@/lib/fetchPosts";
+import { fetchPosts } from "@/libs/fetchPosts";
 import HeroPost from "@/components/Posts/HeroPost";
 import LoadMoreButton from "@/components/Posts/LoadMoreButton";
 

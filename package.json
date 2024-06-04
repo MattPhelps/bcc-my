@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.4",
+    "@prisma/client": "^5.15.0",
     "@types/bcrypt": "^5.0.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
+    "@vercel/postgres": "^0.8.0",
     "autoprefixer": "10.4.14",
     "axios": "^1.5.1",
     "bcrypt": "^5.1.0",
@@ -53,6 +55,7 @@
   },
   "devDependencies": {
     "@types/fslightbox-react": "^1.7.3",
-    "@types/react-dropzone": "^5.1.0"
+    "@types/react-dropzone": "^5.1.0",
+    "prisma": "^5.15.0"
   }
 }

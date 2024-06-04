@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 // import { fetchPosts } from '@/lib/fetchPosts';
-import { fetchMorePosts } from '@/lib/fetchPosts';
+import { fetchMorePosts } from '@/libs/fetchPosts';
 import MoreStories from './more-stories';
 
 const LoadMoreButton = ({ initialMorePosts, pageInfo: initialPageInfo }) => {

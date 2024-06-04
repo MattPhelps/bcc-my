@@ -1,4 +1,4 @@
-import { fetchPost } from "@/lib/fetchPost";
+import { fetchPost } from "@/libs/fetchPost";
 import type { Metadata, ResolvingMetadata } from "next";
 import striptags from "striptags";
 import Link from "next/link";
@@ -48,10 +48,10 @@ export default async function PostPage({ params }) {
   return (
     //  <!-- Blog Article -->
     <>
-      <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="grid lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6 text-[black]/70">
-          <div className="lg:col-span-2">
-            <div className="py-8 lg:pe-8">
+    <section className="pt-1 pb-10">
+        <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
+        <div className="mt">
+          <div className="content-container">
               <div className="space-y-5 lg:space-y-8">
                 <Link
                   className="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline dark:text-blue-500"
@@ -80,9 +80,9 @@ export default async function PostPage({ params }) {
             </div>
           </div>
           {/* <!-- End Content --> */}
-           <Sidebar posts={morePosts} />
+          {/*  <Sidebar posts={morePosts} />  */}
         </div>
-      </div>
+      </section>
     </>
   );
 }
