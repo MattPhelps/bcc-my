@@ -6,6 +6,7 @@ import Button from '@/components/Common/Button';
 
 const pageTitle = `Tattoo Styles Chart`;
 const pageDescription = `Design your own tattoos!`;
+const pageSlug = '/styles';
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -31,7 +32,7 @@ const StylesPage = () => {
 
           <div className="flex flex-wrap justify-center -mx-4 mt-24">
             {stylesData.map((cell, index) => (
-              <a key={index} href={cell.href} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-8 mb-8 duration-100 ease-in hover:scale-105">
+              <a key={index} href={`${pageSlug}${cell.slug}`} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-8 mb-8 duration-100 ease-in hover:scale-105">
                 <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
                   <img src={cell.image} alt={cell.title} className="w-full h-56 object-cover object-center" />
                   <div className="p-4">

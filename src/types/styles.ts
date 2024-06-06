@@ -3,5 +3,5 @@ export type Styles = {
   title: string;
   image: string;
   description: string;
-  href: string;
+  slug: string;
 };
