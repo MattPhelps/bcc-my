@@ -5,7 +5,7 @@ export const meaningData: Meaning[] = [
     {   
         id: 1,
         title: 'Butterfly',
-        keyword: '',
+        keyword: 'Butterfly Tattoo Meaning',
         description: 'Butterflies often symbolize transformation and change.',
         slug: '/butterfly',
         image: "string",
@@ -14,7 +14,7 @@ export const meaningData: Meaning[] = [
          
         id: 2,
         title: 'Dragon',
-        keyword: '',
+        keyword: 'Dragon Tattoo Meaning',
         description: 'Dragons symbolize power, strength, and good luck.',
         slug: '/dragon',
         image: "string",
