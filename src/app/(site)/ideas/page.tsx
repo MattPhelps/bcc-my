@@ -2,7 +2,7 @@ import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
 import { Metadata } from "next";
 import { ideasData, placementIdeasData, popularIdeasData } from "./ideasData";
-import IdeaGrid from "@/components/IdeaGrid";
+import CellGrid from "@/components/CellGrid";
 
 const pageTitle = `Tattoo Ideas`;
 const pageSlug = `/ideas`;
@@ -31,16 +31,16 @@ const IdeasPage = () => {
             
           {/* PLACEMENT TATTOO IDEAS */}
           <h2 className="text-3xl font-bold mt-24 mb-4">Placement Tattoo Ideas</h2>
-          <IdeaGrid data={placementIdeasData} rootSlug={pageSlug}/>
+          <CellGrid data={placementIdeasData} rootSlug={pageSlug}/>
 
               {/* POPULAR TATTOO IDEAS */}
             <h2 className="text-3xl font-bold mt-24 mb-4">Popular Tattoo Ideas</h2>
-            <IdeaGrid data={popularIdeasData} rootSlug={pageSlug}/>
+            <CellGrid data={popularIdeasData} rootSlug={pageSlug}/>
           
 
             {/* PLACEMENT TATTOO IDEAS */}
               <h2 className="text-3xl font-bold mt-24 mb-4">Tattoo Ideas</h2>
-              <IdeaGrid data={ideasData} rootSlug={pageSlug}/>
+              <CellGrid data={ideasData} rootSlug={pageSlug}/>
 
         </div>
       </section>

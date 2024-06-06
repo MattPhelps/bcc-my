@@ -1,25 +1,19 @@
+"use client";
+import Link from 'next/link';
 import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
-import { Metadata } from "next";
-import { meaningData } from "./ideasData";
-import IdeaGrid from "@/components/IdeaGrid";
+import { meaningData } from "./meaningData";
+import CellGrid from "@/components/CellGrid";
 
-const pageTitle = `Tattoo Meaning`;
-
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: `Discover unique tattoo ideas in any style you can imagine.!`
-}
+const pageSlug = "/meaning";
 
 const MeaningPage = () => {
 
   return (
     <>
-      <section className="pt-3 pb-25">
+    <section className="pt-3 pb-25">
         <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
-          <PageTitle title="Tattoo Meaning"  paragraph="Your next tattoo idea is waiting for you. Here you will find thousands of popular tattoo concepts for your next ink session. Browse through thousands of high-quality designs and discover the perfect tattoo that suits your personality and style."   />
-            
-            
+          <PageTitle title="Tattoo Meanings"  paragraph=""   />
             <div className="wow fadeInUp text-center">
               <Button
                 href="/design"
@@ -29,10 +23,23 @@ const MeaningPage = () => {
               </Button>
             </div>
 
-         
+            
+          {/* TATTOO MEANINGS */}
+          <h2 className="text-3xl font-bold mt-24 mb-4">Top Tattoo Meanings</h2>
+          <CellGrid data={meaningData} rootSlug={pageSlug}/>
+
+              {/* POPULAR TATTOO IDEAS
+            <h2 className="text-3xl font-bold mt-24 mb-4">Popular Tattoo Ideas</h2>
+            <CellGrid data={meaningData} rootSlug={pageSlug}/>
+          
+
+             PLACEMENT TATTOO IDEAS 
+              <h2 className="text-3xl font-bold mt-24 mb-4">Tattoo Ideas</h2>
+              <CellGrid data={meaningData} rootSlug={pageSlug}/>
+            */}
         </div>
       </section>
-    </>
+      </>
   );
 };
 

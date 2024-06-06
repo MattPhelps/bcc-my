@@ -58,5 +58,11 @@ export const resourceLink: FooterLink[] = [
     title: "Blog",
     href: "/blog",
     newTab: false,
+  },
+  {
+    id: 9,
+    title: "Tattoo Meanings",
+    href: "/meaning",
+    newTab: false,
   }
 ];

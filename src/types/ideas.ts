@@ -1,7 +1,7 @@
 export type Ideas = {
   id: number;
   title: string;
-  label: string;
+  keyword: string;
   image: string;
   description: string;
   slug: string;

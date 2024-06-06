@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IdeaGrid = ({ data, rootSlug }) => {
+const CellGrid = ({ data, rootSlug }) => {
   return (
     <div>
       <div className="flex flex-wrap justify-center -mx-2 mt-12">
@@ -12,7 +12,7 @@ const IdeaGrid = ({ data, rootSlug }) => {
                 <img src={cell.image} alt={cell.title} className="w-full h-full object-cover object-center" />
               </div>
               <div className="p-2">
-                <h2 className="text-l text-center font-bold mb-2">{cell.label}</h2>
+                <h2 className="text-l text-center font-bold mb-2">{cell.title}</h2>
               </div>
             </div>
           </a>
@@ -22,4 +22,4 @@ const IdeaGrid = ({ data, rootSlug }) => {
   );
 };
 
-export default IdeaGrid;
+export default CellGrid;
