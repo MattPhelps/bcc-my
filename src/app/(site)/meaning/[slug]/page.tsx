@@ -10,13 +10,14 @@ export default function MeaningTemplatePage() {
 
   useEffect(() => {
     if (slug) {
-      const foundMeaning = meaningData.find((item) => item.slug === slug);
+      const slugWithSlash = `/${slug}`;  // Add leading slash to match the data
+      const foundMeaning = meaningData.find((item) => item.slug === slugWithSlash);
       setMeaning(foundMeaning || null);
     }
   }, [slug]);
 
-  if (!meaning) {
-    return <p>Meaning not found!</p>;
+  if (!meaning) {  // Check for null or undefined meaning before rendering
+    return <p>Meaning not found!</p>; //code will break if this block is removeed
   }
 
   return (

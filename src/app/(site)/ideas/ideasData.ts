@@ -223,7 +223,7 @@ export const ideasData: Ideas[] = [
         keyword: "Fine Line Tattoo Ideas",
         image: "/styles/abstract.png",
         description: "",
-        slug: "fine-line",
+        slug: "/fine-line",
         count: 0,
     },
     {
@@ -232,7 +232,7 @@ export const ideasData: Ideas[] = [
         keyword: "Forearm Tattoo Ideas",
         image: "/styles/abstract.png",
         description: "",
-        slug: "forearm",
+        slug: "/forearm",
         count: 0,
     },
 ]

@@ -7,7 +7,7 @@ export const meaningData: Meaning[] = [
         title: 'Butterfly',
         keyword: '',
         description: 'Butterflies often symbolize transformation and change.',
-        slug: 'butterfly',
+        slug: '/butterfly',
         image: "string",
     },
     {
@@ -16,7 +16,7 @@ export const meaningData: Meaning[] = [
         title: 'Dragon',
         keyword: '',
         description: 'Dragons symbolize power, strength, and good luck.',
-        slug: 'dragon',
+        slug: '/dragon',
         image: "string",
     }
 ]
