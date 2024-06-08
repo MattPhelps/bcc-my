@@ -10,7 +10,6 @@ Disallow: /login
 Disallow: /signup
 Disallow: /design
 Disallow: /affiliate
-Disallow: /pain-chart
 Disallow: /price-calculator
 Disallow: /font-generator
 Disallow: /size-calculator

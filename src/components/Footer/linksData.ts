@@ -1,7 +1,7 @@
 import { FooterLink } from "@/types/footerLink";
 
 
-export const supportsLink: FooterLink[] = [
+export const companyLink: FooterLink[] = [
   {
     id: 1,
     title: "About",
@@ -65,4 +65,10 @@ export const resourceLink: FooterLink[] = [
   //  href: "/meaning",
   //  newTab: false,
   //}
+  {
+    id: 9,
+    title: "Pain Chart",
+    href: "/pain-chart",
+    newTab: false,
+  }
 ];
