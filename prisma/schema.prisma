@@ -10,21 +10,103 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model Post {
-  id        String     @default(cuid()) @id
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  String?
-}
-
 model User {
   id            String       @default(cuid()) @id
   name          String?
-  email         String?   @unique
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
+  email         String?      @unique
+  passwordHash  String
+  createdAt     DateTime     @default(now()) @map(name: "created_at")
+  updatedAt     DateTime     @updatedAt @map(name: "updated_at")
+  designs       Design[]
+  collections   Collection[]
+  favorites     Favorite[]
+
   @@map(name: "users")
+}
+
+model Design {
+  id          String       @default(cuid()) @id
+  userId      String
+  imageUrl    String
+  description String?
+  createdAt   DateTime     @default(now()) @map(name: "created_at")
+  updatedAt   DateTime     @updatedAt @map(name: "updated_at")
+  user        User         @relation(fields: [userId], references: [id])
+  ideas       DesignsIdeas[]
+  styles      DesignsStyles[]
+  favorites   Favorite[]
+  collections CollectionsDesign[]
+
+  @@map(name: "designs")
+}
+
+model Collection {
+  id        String               @default(cuid()) @id
+  userId    String
+  name      String
+  createdAt DateTime             @default(now()) @map(name: "created_at")
+  updatedAt DateTime             @updatedAt @map(name: "updated_at")
+  user      User                 @relation(fields: [userId], references: [id])
+  designs   CollectionsDesign[]
+
+  @@map(name: "collections")
+}
+
+model Favorite {
+  id        String     @default(cuid()) @id
+  userId    String
+  designId  String
+  createdAt DateTime   @default(now()) @map(name: "created_at")
+  user      User       @relation(fields: [userId], references: [id])
+  design    Design     @relation(fields: [designId], references: [id])
+
+  @@map(name: "favorites")
+}
+
+model Idea {
+  id          String       @default(cuid()) @id
+  name        String       @unique
+  description String?
+  designs     DesignsIdeas[]
+
+  @@map(name: "ideas")
+}
+
+model Style {
+  id          String       @default(cuid()) @id
+  name        String       @unique
+  description String?
+  designs     DesignsStyles[]
+
+  @@map(name: "styles")
+}
+
+model DesignsIdeas {
+  id        String     @default(cuid()) @id
+  designId  String
+  ideaId    String
+  design    Design     @relation(fields: [designId], references: [id])
+  idea      Idea       @relation(fields: [ideaId], references: [id])
+
+  @@map(name: "designs_ideas")
+}
+
+model DesignsStyles {
+  id        String     @default(cuid()) @id
+  designId  String
+  styleId   String
+  design    Design     @relation(fields: [designId], references: [id])
+  style     Style      @relation(fields: [styleId], references: [id])
+
+  @@map(name: "designs_styles")
+}
+
+model CollectionsDesign {
+  id            String     @default(cuid()) @id
+  collectionId  String
+  designId      String
+  collection    Collection @relation(fields: [collectionId], references: [id])
+  design        Design     @relation(fields: [designId], references: [id])
+
+  @@map(name: "collections_designs")
 }

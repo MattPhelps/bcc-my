@@ -53,7 +53,7 @@ const SignupPage = () => {
                     {/* New text under the button */}
                     <div className="w-full max-w-md mx-auto py-4">
                     <p className="text-center text-s text-[gray]">
-                      Already have an account? <a href="/login" className="text-[#1ec9d0] underline">Log in</a>
+                      Already have an account? <a href="/login" className="text-[#00baffcc] underline">Log in</a>
                     </p>
                   </div>
                   

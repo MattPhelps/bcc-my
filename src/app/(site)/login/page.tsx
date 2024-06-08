@@ -51,7 +51,7 @@ const LoginPage = () => {
                     {/* New text under the button */}
                     <div className="w-full max-w-md mx-auto py-4">
                     <p className="text-center text-s text-[gray]">
-                      No Account? <a href="/signup" className="text-[#1ec9d0] underline">Join for Free</a>
+                      No Account? <a href="/signup" className="text-[#00baffcc] underline">Join for Free</a>
                     </p>
                   </div>
                   
