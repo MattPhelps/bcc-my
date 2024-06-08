@@ -1,3 +1,4 @@
+{/* 
 "use client"
 import PageTitle from "../../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
@@ -57,4 +58,4 @@ function toCapitalCase(str: string): string {
     return str.replace(/\b\w/g, char => char.toUpperCase());
   }
   
-  
+*/}

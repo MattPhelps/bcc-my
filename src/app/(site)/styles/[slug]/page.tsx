@@ -1,3 +1,4 @@
+{/* 
 "use client"
 import PageTitle from "../../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
@@ -56,5 +57,5 @@ export async function generateStaticParams() {
 function toCapitalCase(str: string): string {
     return str.replace(/\b\w/g, char => char.toUpperCase());
   }
-  
+  */}
   
