@@ -29,7 +29,7 @@ const Hero = () => {
             <p className="max-w-[714px] text-center text-[black] dark:text-[white] mb-8 mx-auto font-small">If you have an idea for a tattoo but can't find the right design, let our AI generate tattoo ideas for you within seconds. Create the perfect design based on what you like, and get unlimited design options.</p>
           
           <Button
-            href="/design"
+            href="/signup"
             style={{ }}
             className=""
           >

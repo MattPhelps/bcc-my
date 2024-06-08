@@ -23,7 +23,7 @@ What are you waiting for?
             </p>
 
             <Button
-              href="/design"
+              href="/signup"
               style={{ }}
               className=""
               >

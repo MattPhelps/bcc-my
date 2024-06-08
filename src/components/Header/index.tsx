@@ -9,11 +9,9 @@ import DropDown from "./DropDown";
 import siteConfig from "../../../siteConfig";
 import Button from '@/components/Common/Button';
 
-
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const pathUrl = usePathname();
-
 
   return (
     <>
@@ -87,8 +85,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            {/* Remove once auth has been built */}
-
+            {/* 
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
             <Button
                 href="/design"
@@ -101,9 +98,8 @@ const Header = () => {
                 Create a Design
               </Button>
             </div>
+            */}
 
-        
-     {/*
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
 
                <Button
@@ -126,7 +122,6 @@ const Header = () => {
               </Button>
                
             </div>
-             */}
           </div>
         </div>
       </header>
