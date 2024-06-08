@@ -49,7 +49,7 @@ export default async function PostPage({ params }) {
     //  <!-- Blog Article -->
     <>
     <section className="pt-1 pb-10">
-        <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
+        <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
         <div className="mt">
           <div className="content-container">
               <div className="space-y-5 lg:space-y-8">

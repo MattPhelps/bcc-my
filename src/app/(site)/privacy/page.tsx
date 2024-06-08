@@ -15,7 +15,7 @@ const PrivacyPage = () => {
   return (
     <>
       <section className="pt-3 pb-25">
-        <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
+        <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
           <PageTitle title="Privacy Policy" paragraph={siteConfig.lastUpdated} />
 
           <div className="mt-8">
