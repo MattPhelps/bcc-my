@@ -20,11 +20,6 @@ const PainChartPage = () => {
           <div className="mt-8">
           <div className="content-container">
 
-        
-          <p className="mt-4"></p>
-          <p className="mt-4"></p>
-          <p className="mt-4"></p>
-
           <h2 className="mt-24 mb-8 text-3xl font-bold">Female Pain Chart</h2>
           <img src="/resources/female-tattoo-pain-chart.png" alt="" className="w-full h-full object-cover object-center" />
 
