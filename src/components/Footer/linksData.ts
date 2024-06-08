@@ -66,9 +66,15 @@ export const resourceLink: FooterLink[] = [
   //  newTab: false,
   //}
   {
-    id: 9,
+    id: 10,
     title: "Pain Chart",
     href: "/pain-chart",
     newTab: false,
-  }
+  },
+  {
+    id: 11,
+    title: "Price Calculator",
+    href: "/price-calculator",
+    newTab: false,
+  },
 ];
