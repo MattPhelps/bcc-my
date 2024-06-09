@@ -58,6 +58,7 @@ import siteConfig from '../../../siteConfig';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { usePathname } from 'next/navigation';
+import Breadcrumb from '@/components/Common/Breadcrumb'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -67,8 +68,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   
   // Define the paths where the header and footer should not be shown
   const noHeaderFooterPaths = ['/design', '/login', '/signup'];
-
   const showHeaderFooter = !noHeaderFooterPaths.includes(pathname);
+
+  // Define the paths where the breadcrumbs should not be shown
+  const noBreadcrumbPaths = ['/', '/login', '/signup', 'design'];
+  const showBreadcrumbs = !noBreadcrumbPaths.includes(pathname);
 
   return (
     <html lang="en">
@@ -101,6 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className="bg-white dark:bg-dark">
         {showHeaderFooter && <Header />}
+        {showBreadcrumbs && <Breadcrumb />}
         {children}
         {showHeaderFooter && <Footer />}
       </body>

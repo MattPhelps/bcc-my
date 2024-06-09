@@ -14,7 +14,7 @@ const ContactPage = () => {
 
   return (
     <>
-     <section className="pt-3 pb-25">
+     <section className="pt-3 pb-10">
       <SupportSection />
       </section>
     </>
