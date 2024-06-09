@@ -58,7 +58,7 @@ import siteConfig from '../../../siteConfig';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { usePathname } from 'next/navigation';
-import Breadcrumb from '@/components/Common/Breadcrumb'
+import Breadcrumb from '@/components/Common/Breadcrumb';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
