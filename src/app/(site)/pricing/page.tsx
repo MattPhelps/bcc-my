@@ -1,4 +1,3 @@
-import Breadcrumb from "@/components/Breadcrumb";
 import Faq from "@/components/Faq";
 import PricingGrids from "@/components/Pricing/PricingGrids";
 import PricingFaqs from "@/components/PricingFaqs";
