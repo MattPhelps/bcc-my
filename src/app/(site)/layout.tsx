@@ -11,9 +11,8 @@ import Breadcrumb from '@/components/Common/Breadcrumb';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
- const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
+  const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
 
-  
   // Define the paths where the header and footer should not be shown
   const noHeaderFooterPaths = ['/design', '/login', '/signup'];
   const showHeaderFooter = !noHeaderFooterPaths.includes(pathname);
@@ -53,7 +52,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className="bg-white dark:bg-dark">
         {showHeaderFooter && <Header />}
+        <div className="breadcrumb-container">
         {showBreadcrumbs && <Breadcrumb />}
+        </div>
         {children}
         {showHeaderFooter && <Footer />}
       </body>

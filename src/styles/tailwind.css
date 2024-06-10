@@ -55,6 +55,17 @@
   color: #000 !important;
 }
 
+/* FOR BREADCRUMBS */
+.breadcrumb-container {
+  max-width: 700px; 
+  margin: 0 auto; 
+  line-height: 1.75;
+
+@media screen and (max-width: 640px) {
+  padding: 0 10px;
+}
+}
+
 
   /* END text color styling */
 
