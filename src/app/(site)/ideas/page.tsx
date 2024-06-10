@@ -1,8 +1,8 @@
 import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
 import { Metadata } from "next";
-import { ideasData, placementIdeasData, popularIdeasData } from "./ideasData";
 import CellGrid from "@/components/CellGrid";
+import { fetchAllIdeas } from "@/libs/services/ideaService";
 
 const pageTitle = `Tattoo Ideas`;
 const pageSlug = `/ideas`;
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: `Discover unique tattoo ideas in any style you can imagine.!`
 }
 
-const IdeasPage = () => {
-
+const IdeasPage = async () => {
+  const allIdeas = await fetchAllIdeas();
   return (
     <>
       <section className="pt-3 pb-25">
@@ -30,17 +30,9 @@ const IdeasPage = () => {
 
             
           {/* PLACEMENT TATTOO IDEAS */}
-          <h2 className="text-3xl font-bold mt-24 mb-4">Placement Tattoo Ideas</h2>
-          <CellGrid data={placementIdeasData} rootSlug={pageSlug}/>
+          <h2 className="text-3xl font-bold mt-24 mb-4">Tattoo Ideas</h2>
+          <CellGrid data={allIdeas} rootSlug={pageSlug}/>
 
-              {/* POPULAR TATTOO IDEAS */}
-            <h2 className="text-3xl font-bold mt-24 mb-4">Popular Tattoo Ideas</h2>
-            <CellGrid data={popularIdeasData} rootSlug={pageSlug}/>
-          
-
-            {/* PLACEMENT TATTOO IDEAS */}
-              <h2 className="text-3xl font-bold mt-24 mb-4">Tattoo Ideas</h2>
-              <CellGrid data={ideasData} rootSlug={pageSlug}/>
 
         </div>
       </section>

@@ -1,5 +1,3 @@
-// schema.prisma
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,7 +9,7 @@ datasource db {
 }
 
 model User {
-  id            String       @default(uuid()) @id
+  id            String       @default(cuid()) @id
   name          String?
   email         String?      @unique
   passwordHash  String
@@ -25,7 +23,7 @@ model User {
 }
 
 model Design {
-  id          String       @default(uuid()) @id
+  id          String       @default(cuid()) @id
   userId      String
   imageUrl    String
   description String?
@@ -41,7 +39,7 @@ model Design {
 }
 
 model Collection {
-  id        String               @default(uuid()) @id
+  id        String               @default(cuid()) @id
   userId    String
   name      String
   createdAt DateTime             @default(now()) @map(name: "created_at")
@@ -53,7 +51,7 @@ model Collection {
 }
 
 model Favorite {
-  id        String     @default(uuid()) @id
+  id        String     @default(cuid()) @id
   userId    String
   designId  String
   createdAt DateTime   @default(now()) @map(name: "created_at")
@@ -64,25 +62,30 @@ model Favorite {
 }
 
 model Idea {
-  id          String       @default(uuid()) @id
+  id          String       @default(cuid()) @id
   name        String       @unique
+  slug        String?      
+  image       String?
   description String?
   designs     DesignsIdeas[]
+  meaning     Meaning?
 
   @@map(name: "ideas")
 }
 
 model Style {
-  id          String       @default(uuid()) @id
+  id          String       @default(cuid()) @id
   name        String       @unique
+  slug        String
   description String?
+  image       String?
   designs     DesignsStyles[]
 
   @@map(name: "styles")
 }
 
 model DesignsIdeas {
-  id        String     @default(uuid()) @id
+  id        String     @default(cuid()) @id
   designId  String
   ideaId    String
   design    Design     @relation(fields: [designId], references: [id])
@@ -92,7 +95,7 @@ model DesignsIdeas {
 }
 
 model DesignsStyles {
-  id        String     @default(uuid()) @id
+  id        String     @default(cuid()) @id
   designId  String
   styleId   String
   design    Design     @relation(fields: [designId], references: [id])
@@ -102,11 +105,24 @@ model DesignsStyles {
 }
 
 model CollectionsDesign {
-  id            String     @default(uuid()) @id
+  id            String     @default(cuid()) @id
   collectionId  String
   designId      String
   collection    Collection @relation(fields: [collectionId], references: [id])
   design        Design     @relation(fields: [designId], references: [id])
 
   @@map(name: "collections_designs")
+}
+
+model Meaning {
+  id          String     @default(cuid()) @id
+  ideaId      String     @unique
+  name        String
+  slug        String
+  text        String?
+  createdAt   DateTime   @default(now()) @map(name: "created_at")
+  updatedAt   DateTime   @updatedAt @map(name: "updated_at")
+  idea        Idea       @relation(fields: [ideaId], references: [id])
+
+  @@map(name: "meanings")
 }
