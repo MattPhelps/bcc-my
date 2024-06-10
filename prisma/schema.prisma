@@ -64,7 +64,7 @@ model Favorite {
 model Idea {
   id          String       @default(cuid()) @id
   name        String       @unique
-  slug        String?      
+  slug        String?      @unique
   image       String?
   description String?
   designs     DesignsIdeas[]

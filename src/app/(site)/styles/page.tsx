@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
-import { fetchAllStyles } from "@/libs/services/styleService";
+import { getAllStyles } from "@/libs/services/styleService";
 
 const pageTitle = `Tattoo Styles Chart`;
 const pageDescription = `Design your own tattoos!`;
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const StylesPage = async () => {
-  const allStyles = await fetchAllStyles();
+  const allStyles = await getAllStyles();
 
   return (
     <>

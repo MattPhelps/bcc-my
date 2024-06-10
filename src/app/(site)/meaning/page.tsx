@@ -2,12 +2,12 @@ import Link from 'next/link';
 import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
 import MeaningGrid from "@/components/MeaningGrid";
-import { fetchAllMeanings } from '@/libs/services/meaningService';
+import { getAllMeanings } from '@/libs/services/meaningService';
 
 const pageSlug = "/meaning";
 
 const MeaningPage = async () => {
-  const allMeanings = await fetchAllMeanings();
+  const allMeanings = await getAllMeanings();
   return (
     <>
     <section className="pt-3 pb-25">

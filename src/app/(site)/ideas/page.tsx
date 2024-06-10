@@ -2,7 +2,7 @@ import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
 import { Metadata } from "next";
 import CellGrid from "@/components/CellGrid";
-import { fetchAllIdeas } from "@/libs/services/ideaService";
+import { getAllIdeas } from "@/libs/services/ideaService";
 
 const pageTitle = `Tattoo Ideas`;
 const pageSlug = `/ideas`;
@@ -10,10 +10,10 @@ const pageSlug = `/ideas`;
 export const metadata: Metadata = {
   title: pageTitle,
   description: `Discover unique tattoo ideas in any style you can imagine.!`
-}
+};
 
 const IdeasPage = async () => {
-  const allIdeas = await fetchAllIdeas();
+  const allIdeas = await getAllIdeas();
   return (
     <>
       <section className="pt-3 pb-25">
@@ -28,12 +28,8 @@ const IdeasPage = async () => {
               </Button>
             </div>
 
-            
-          {/* PLACEMENT TATTOO IDEAS */}
           <h2 className="text-3xl font-bold mt-24 mb-4">Tattoo Ideas</h2>
           <CellGrid data={allIdeas} rootSlug={pageSlug}/>
-
-
         </div>
       </section>
     </>

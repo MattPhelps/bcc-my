@@ -1,6 +1,6 @@
 import prisma from "../prisma";
 
-export const fetchAllIdeas = async () => {
+export const getAllIdeas = async () => {
     try {
       const ideas = await prisma.idea.findMany();
       return ideas;
@@ -8,5 +8,4 @@ export const fetchAllIdeas = async () => {
       console.error("Error fetching ideas:", error);
       return [];
     }
-  };
-  
+};

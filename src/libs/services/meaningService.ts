@@ -1,6 +1,6 @@
 import prisma from "../prisma";
 
-export const fetchAllMeanings = async () => {
+export const getAllMeanings = async () => {
   try {
     const meaning = await prisma.meaning.findMany();
     return meaning;

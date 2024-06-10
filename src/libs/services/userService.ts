@@ -1,6 +1,6 @@
 import prisma from "../prisma";
 
-  export const fetchUserCount = async () => {
+  export const getUserCount = async () => {
     try {
       const userCount = await prisma.user.count();
       return userCount;

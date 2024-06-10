@@ -1,6 +1,6 @@
 import prisma from "../prisma";
 
-export const fetchAllStyles = async () => {
+export const getAllStyles = async () => {
   try {
     const styles = await prisma.style.findMany();
     return styles;

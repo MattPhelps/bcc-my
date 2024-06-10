@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const showHeaderFooter = !noHeaderFooterPaths.includes(pathname);
 
   // Define the paths where the breadcrumbs should not be shown
-  const noBreadcrumbPaths = ['/', '/login', '/signup', 'design'];
+  const noBreadcrumbPaths = ['/', '/login', '/signup', '/design'];
   const showBreadcrumbs = !noBreadcrumbPaths.includes(pathname);
 
   return (
@@ -52,9 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className="bg-white dark:bg-dark">
           {showHeaderFooter && <Header />}
-          <div className="breadcrumb-container">
             {showBreadcrumbs && <Breadcrumb />}
-          </div>
           {children}
           {showHeaderFooter && <Footer />}
       </body>
