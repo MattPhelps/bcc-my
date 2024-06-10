@@ -9,6 +9,7 @@ User-agent: *
 Disallow: /login
 Disallow: /signup
 Disallow: /design
+Disallow: /test
 Disallow: /affiliate
 Disallow: /font-generator
 Disallow: /size-calculator
