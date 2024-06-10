@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PageTitle from "../../../components/Common/PageTitle";
 import Button from '@/components/Common/Button';
-import CellGrid from "@/components/CellGrid";
+import MeaningGrid from "@/components/MeaningGrid";
 import { fetchAllMeanings } from '@/libs/services/meaningService';
 
 const pageSlug = "/meaning";
@@ -24,7 +24,7 @@ const MeaningPage = async () => {
 
           {/* TATTOO MEANINGS */}
           <h2 className="text-3xl font-bold mt-24 mb-4">Top Tattoo Meanings</h2>
-          <CellGrid data={allMeanings} rootSlug={pageSlug}/>
+          <MeaningGrid data={allMeanings} rootSlug={pageSlug}/>
 
 
         </div>
