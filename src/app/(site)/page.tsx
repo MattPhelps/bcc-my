@@ -8,7 +8,6 @@ import Faq from "@/components/Faq";
 import CallToAction from "@/components/CallToAction";
 import homeFaqData from '@/components/Faq/faqData';
 
-
 const pageTitle = `${siteConfig.siteTitle}`;
 const pageDescription = `${siteConfig.siteDescription}`;
 

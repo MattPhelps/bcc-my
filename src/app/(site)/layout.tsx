@@ -51,12 +51,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body className="bg-white dark:bg-dark">
-        {showHeaderFooter && <Header />}
-        <div className="breadcrumb-container">
-        {showBreadcrumbs && <Breadcrumb />}
-        </div>
-        {children}
-        {showHeaderFooter && <Footer />}
+          {showHeaderFooter && <Header />}
+          <div className="breadcrumb-container">
+            {showBreadcrumbs && <Breadcrumb />}
+          </div>
+          {children}
+          {showHeaderFooter && <Footer />}
       </body>
     </html>
   );
