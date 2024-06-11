@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: pageDescription,
 };
 
-const StylesPage = async () => {
+const AllStylesPage = async () => {
   const allStyles = await getAllStyles();
 
   return (
@@ -49,4 +49,4 @@ const StylesPage = async () => {
   );
 };
 
-export default StylesPage;
+export default AllStylesPage;

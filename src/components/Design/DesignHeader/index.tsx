@@ -76,7 +76,7 @@ const DesignHeader = ({ selectedTab, setSelectedTab }) => {
                 style={{}}
                 className="flex items-center justify-center gap-2"
               >
-                🙏 Leave Feedback
+                Log out
               </Button>
             </div>
           </div>
