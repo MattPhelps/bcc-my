@@ -19,8 +19,3 @@ import prisma from "../prisma";
       return [];
     }
   };
-  
-  // Access like this
-  // import { getUserCount } from '@/libs/repositories/userRepository';
-  // const userCount = await getUserCount();
-  // const userName = await prisma.user.findFirst()

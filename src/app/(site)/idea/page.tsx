@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: `Discover unique tattoo ideas in any style you can imagine.!`
 };
 
-const IdeasPage = async () => {
+const AllIdeasPage = async () => {
   const allIdeas = await getAllIdeas();
   return (
     <>
@@ -36,4 +36,4 @@ const IdeasPage = async () => {
   );
 };
 
-export default IdeasPage;
+export default AllIdeasPage;
