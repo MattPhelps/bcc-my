@@ -12,9 +12,5 @@ Disallow: /design
 Disallow: /test
 Disallow: /ideas
 Disallow: /meaning
-Disallow: /affiliate
-Disallow: /font-generator
-Disallow: /size-calculator
-Disallow: /random-generator
 
 Sitemap: https://inkgen.ai/sitemap.xml

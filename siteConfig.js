@@ -3,7 +3,7 @@ const siteConfig = {
   siteURL: "https://inkgen.ai",
   shortURL: "inkgen.ai",
   siteTitle: "AI Tattoo Generator - InkGen",
-  siteDescription: "InkGen is an AI tattoo generator tool that will help you design the tattoo of your dreams.",
+  siteDescription: "InkGen is an AI tattoo generator tool that will help you design the tattoo of your dreams. Try today for free!",
   emailFormLink: "https://formspree.io/f/xwkgkdjq",
   buttonColor: "#8b3eff",
   linkColor: "#1ec9d0",
