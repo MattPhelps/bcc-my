@@ -1,5 +1,5 @@
 "use client";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import React from "react";
 import PageTitle from "../../../components/Common/PageTitle";
 import { signIn, useSession } from "next-auth/react";
@@ -7,13 +7,13 @@ import GoogleButton from "react-google-button";
 import { redirect } from "next/navigation";
 import useSignupForm from "@/hooks/useSignupForm";
 
-const pageTitle = `Signup to InkGen`;
-const pageDescription = `Design your own tattoos!`;
+// const pageTitle = `Signup to InkGen`;
+// const pageDescription = `Design your own tattoos!`;
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-};
+// export const metadata: Metadata = {
+//   title: pageTitle,
+//   description: pageDescription,
+// };
 
 const SignupPage = () => {
   const { userData, errors, loading, onHandleInput, handleSubmit } = useSignupForm();
