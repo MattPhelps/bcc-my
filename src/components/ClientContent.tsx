@@ -5,18 +5,16 @@ import { useLayout } from '@/context/LayoutContext';
 import Footer from './Footer';
 import Breadcrumb from './Common/Breadcrumb';
 
-const ClientContent = ({ children, hideHeader, hideBreadcrumbs }: { children: React.ReactNode, hideHeader: boolean, hideBreadcrumbs: boolean }) => {
+const ClientContent = ({ children, hideHeader }: { children: React.ReactNode, hideHeader: boolean }) => {
   const { setHideHeader, setHideBreadcrumbs } = useLayout();
 
   useEffect(() => {
     setHideHeader(hideHeader);
-    setHideBreadcrumbs(hideBreadcrumbs);
-  }, [hideHeader, setHideHeader, hideBreadcrumbs, setHideBreadcrumbs]);
+  }, [hideHeader, setHideHeader, setHideBreadcrumbs]);
 
   return (
     <>
       {!hideHeader && <Header />}
-      {!hideBreadcrumbs && <Breadcrumb />}
       {children}
       {!hideHeader && <Footer />}
 
