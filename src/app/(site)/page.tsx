@@ -25,7 +25,12 @@ export default function Home() {
         <Reviews />
       </section> 
       <Faq data={homeFaqData} />
-      <CallToAction />
+      <CallToAction
+        heading="Join 5,645 tattoo enthusiasts"
+        description="Our community of ink lovers are already using the power of AI to create mindblowing designs. What are you waiting for?"
+        buttonText="Design your tattoo"
+        buttonSlug="/signup"
+      />
     </>
   );
 }
