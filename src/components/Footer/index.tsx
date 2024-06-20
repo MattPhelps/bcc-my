@@ -1,6 +1,6 @@
 import FooterLinkList from "./FooterLinkList";
 import SocialLinkList from "./SocialLinkList";
-import { legalLink, companyLink, resourceLink } from "./linksData";
+import { legalLink, companyLink, toolLink } from "./linksData";
 import siteConfig from '../../../siteConfig';
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="max-w-[571px] w-full">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-10">
                 <FooterLinkList title="Company" links={companyLink} />
-                <FooterLinkList title="Resources" links={resourceLink} />
+                <FooterLinkList title="Resources" links={toolLink} />
                 <FooterLinkList title="Legal" links={legalLink} />
               </div>
             </div>

@@ -1,7 +1,5 @@
 import { Metadata } from "next";
-import PageTitle from "../../../../components/Common/PageTitle";
-import Image from "next/image";
-
+import Headline from "@/components/Common/Headline";
 const pageTitle = `Tattoo Pain Chart`;
 const pageDescription = ``;
 
@@ -14,9 +12,13 @@ const PainChartPage = () => {
   return (
     <>
      <section className="pt-3 pb-25">
-        <div className="max-w-[1170px] mx-auto text-[black]/80 dark:text-[white]/50 px-4 sm:px-8 xl:px-0 z-10 pt-25">
-          <PageTitle title="Tattoo Pain Chart" paragraph="Getting a tattoo generally involves some pain, but the location and your personal tolerance will affect how much it hurts. Getting tattooed on an area with little fat, many nerve endings, or thin skin is more likely to hurt." />
 
+          <Headline 
+            title="Tattoo Pain Chart" 
+            paragraph="Getting a tattoo generally involves some pain, but the location and your personal tolerance will affect how much it hurts. Getting tattooed on an area with little fat, many nerve endings, or thin skin is more likely to hurt."
+            showButton={false} 
+           />
+          
           <div className="mt-8">
           <div className="content-container">
 
@@ -91,7 +93,7 @@ const PainChartPage = () => {
 
           </div>
           </div>
-        </div>
+
       </section>
     </>
   );

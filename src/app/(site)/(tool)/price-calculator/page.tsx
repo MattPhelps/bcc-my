@@ -1,9 +1,7 @@
-'use client';
-import { useState } from 'react';
-import { Metadata } from 'next';
-import Button from '@/components/Common/Button';
-import PageTitle from '../../../../components/Common/PageTitle';
+'use client'
+import Headline from '@/components/Common/Headline';
 import PriceCalculator from './PriceCalculator';
+import { Metadata } from 'next';
 
 {/* 
 const pageTitle = `Tattoo Price Calculator`;
@@ -15,14 +13,19 @@ export const metadata: Metadata = {
 };
 */}
 
+
 const PriceCalculatorPage = () => {
 
   return (
     <>
       <section className="pt-3 pb-25">
-        <div className="max-w-[1170px] mx-auto text-[black]/70 dark:text-[white]/50 px-4 sm:px-8 xl:px-0 z-10 pt-25">
-          <PageTitle title="Tattoo Price Calculator" paragraph="Estimate the cost of your next tattoo with our easy-to-use price calculator. Simply select the size, style, location, level of detail, and artist experience for your desired tattoo, and we'll provide you with an estimated price range. Please note that this is a rough estimate, and the final cost may vary based on additional factors and the artist's rates." />
           
+          <Headline 
+            title="Tattoo Price Calculator" 
+            paragraph="Estimate the cost of your next tattoo with our easy-to-use price calculator. Simply select the size, style, location, level of detail, and artist experience for your desired tattoo, and we'll provide you with an estimated price range. Please note that this is a rough estimate, and the final cost may vary based on additional factors and the artist's rates."
+            showButton={false} 
+           />
+
           <div className="content-container">
           <PriceCalculator />
 
@@ -63,7 +66,7 @@ const PriceCalculatorPage = () => {
 
 
          </div>  
-        </div>
+
       </section>
     </>
   );
