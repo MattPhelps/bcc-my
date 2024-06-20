@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from '@/components/Common/Button';
 import designMenuData from "./designMenuData";
+import { signOut, useSession } from 'next-auth/react';
 
 const DesignHeader = ({ selectedTab, setSelectedTab }) => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const pathUrl = usePathname();
+  const { data: session } = useSession();
 
   return (
     <>
@@ -68,7 +70,8 @@ const DesignHeader = ({ selectedTab, setSelectedTab }) => {
               <ul className={`flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2 lg:py-3`}></ul> {/* Adjusted padding */}
             </nav>
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
-              <Button
+            {session?.user?.name && <button onClick={() => signOut()}>Log out</button>}
+              {/* <Button
                 href="contact"
                 bgColor="bg-[#f3f3f3]"
                 hoverColor="hover:bg-[#e1e4e6]"
@@ -77,7 +80,7 @@ const DesignHeader = ({ selectedTab, setSelectedTab }) => {
                 className="flex items-center justify-center gap-2"
               >
                 Log out
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

@@ -1,25 +1,15 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/animate.css";
 import "../../styles/tailwind.css";
-import siteConfig from '../../../siteConfig';
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { usePathname } from 'next/navigation';
-import Breadcrumb from '@/components/Common/Breadcrumb';
+import siteConfig from "../../../siteConfig";
+import SessionProvider from "../../components/SessionProvider";
+import { getServerSession } from "next-auth";
+import { LayoutProvider } from "@/context/LayoutContext";
+import ClientContentWrapper from "@/components/ClientContentWrapper";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-
+export default async function RootLayout({ children,}: { children: React.ReactNode;}) {
+  const session = await getServerSession();
   const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
-
-  // Define the paths where the header and footer should not be shown
-  const noHeaderFooterPaths = ['/design', '/login', '/signup'];
-  const showHeaderFooter = !noHeaderFooterPaths.includes(pathname);
-
-  // Define the paths where the breadcrumbs should not be shown
-  const noBreadcrumbPaths = ['/', '/login', '/signup', '/design'];
-  const showBreadcrumbs = !noBreadcrumbPaths.includes(pathname);
 
   return (
     <html lang="en">
@@ -37,7 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }`,
           }}
         />
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -50,11 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
 
-      <body className="bg-white dark:bg-dark">
-          {showHeaderFooter && <Header />}
-            {showBreadcrumbs && <Breadcrumb />}
-          {children}
-          {showHeaderFooter && <Footer />}
+      <body className="bg-white  dark:bg-dark">
+        <SessionProvider session={session}>
+          <LayoutProvider>
+            <ClientContentWrapper>{children}</ClientContentWrapper>
+          </LayoutProvider>
+        </SessionProvider>
       </body>
     </html>
   );

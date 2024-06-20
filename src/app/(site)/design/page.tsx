@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DesignHeader from "@/components/Design/DesignHeader";
 import DesignDescription from "@/components/Design/DesignDescription";
 import DesignStyle from "@/components/Design/DesignStyle";
@@ -8,12 +8,18 @@ import DesignButton from "@/components/Design/DesignButton";
 import DesignRender from "@/components/Design/DesignRender";
 import CollectionRender from "@/components/Design/CollectionRender"; 
 import FavoritesRender from "@/components/Design/FavoritesRender"; 
+import { useSession } from "next-auth/react"
+import { redirect } from 'next/navigation';
 
 const pageTitle = `Create a Design`;
 const pageDescription = `Design your own tattoos!`;
 
 const DesignPage = () => {
   const [selectedTab, setSelectedTab] = useState('design');
+  const { data: session, status } = useSession();
+  if (status === "unauthenticated") {
+    redirect('/signup')
+  }
 
   return (
     <>

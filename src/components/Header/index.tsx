@@ -1,22 +1,24 @@
 "use client";
 import Image from "next/image";
-import React from 'react';
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
 import DropDown from "./DropDown";
 import siteConfig from "../../../siteConfig";
-import Button from '@/components/Common/Button';
+import Button from "@/components/Common/Button";
+import { signOut, useSession } from "next-auth/react";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const pathUrl = usePathname();
+  const { data: session } = useSession();
 
   return (
     <>
       <header
-      // Add "sticky" to the class below to make the header sticky
+        // Add "sticky" to the class below to make the header sticky
         className="left-0 top-0 w-full z-9999 bg-white shadow !py-4 lg:!py-0 transition duration-100 top-0"
       >
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 lg:flex items-center justify-between relative">
@@ -41,8 +43,7 @@ const Header = () => {
             <button
               onClick={() => setNavigationOpen(!navigationOpen)}
               className="lg:hidden block"
-            >
-            </button>
+            ></button>
           </div>
 
           <div
@@ -65,10 +66,10 @@ const Header = () => {
                         href={`${menuItem.path}`}
                         className={`relative text-md py-1.5 px-4 border border-transparent hover:bg-[#f3f3f3] ${
                           pathUrl === menuItem.path
-                            ? "nav-gradient rounded text-black" 
-                            : "text-black rounded" 
+                            ? "nav-gradient rounded text-black"
+                            : "text-black rounded"
                         }`}
-                        style={{ color: 'black' }} 
+                        style={{ color: "black" }}
                       >
                         {menuItem.title}
                       </Link>
@@ -81,8 +82,7 @@ const Header = () => {
             <nav>
               <ul
                 className={`flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2 lg:py-10 `}
-              > 
-              </ul>
+              ></ul>
             </nav>
 
             {/* 
@@ -101,8 +101,7 @@ const Header = () => {
             */}
 
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
-
-               <Button
+              {/* <Button
                 href="/login"
                 bgColor="bg-[#f3f3f3]"
                 hoverColor="hover:bg-[#e1e4e6]"
@@ -111,16 +110,15 @@ const Header = () => {
                 className=""
               >
                 Log in
-              </Button>
+              </Button> */}
 
-              <Button
-                href="/signup"
-                style={{ }}
-                className=""
-              >
-                Sign up
-              </Button>
-               
+              {session?.user?.name ? (
+                <button onClick={() => signOut()}> Sign out</button>
+              ) : (
+                <Button href="/signup" style={{}} className="">
+                  Sign up
+                </Button>
+              )}
             </div>
           </div>
         </div>
