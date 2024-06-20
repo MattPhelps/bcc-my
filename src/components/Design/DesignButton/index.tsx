@@ -7,6 +7,7 @@ const DesignButton = () => (
         
               <Button
                 href=""
+                onClick={false}
                 hoverColor="hover:bg-[#7731d8]"
                 textColor="text-[#000]"
                 style={{ }}

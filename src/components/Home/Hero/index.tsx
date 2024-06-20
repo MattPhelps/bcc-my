@@ -30,6 +30,7 @@ const Hero = () => {
           
           <Button
             href="/design"
+            onClick={false}
             style={{ }}
             className=""
           >
