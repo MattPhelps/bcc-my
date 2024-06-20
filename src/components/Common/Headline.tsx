@@ -8,7 +8,7 @@ import Button from '@/components/Common/Button';
 const Headline = ({ title, paragraph = "", showButton = false, ctaText = "Design your tattoo" }) => {
   return (
     <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-5">
-      <div className="flex justify-center">
+      <div className="flex justify-center   ">
       <Breadcrumb />
       </div>
       <PageTitle title={title} paragraph={paragraph} />

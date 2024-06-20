@@ -4,6 +4,7 @@ import PageTitle from "@/components/Common/PageTitle";
 import { getAllStyles, getStylesBySlug, getStyleBySlug} from "@/libs/services/styleService";
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export async function generateStaticParams() {
   const styles = await getAllStyles();
@@ -59,7 +60,10 @@ const StylesPage = async ({ params }) => {
     return (
       <>
         <section className="pt-3 pb-25">
-          <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
+          <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-5">
+          <div className="flex justify-center">
+            <Breadcrumb />
+          </div>
             <PageTitle
               title="Tattoo Styles"
               paragraph="InkGen can generate design in many different tattoo styles. From intricate dotwork to minimalist sketches, from bold blackwork to broad-stroked watercolor tattoos - our AI-powered tattoo generator will create designs in the style that you love. Browse through our catalog of styles and discover the one you connect with the most."
