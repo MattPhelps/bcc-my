@@ -115,7 +115,7 @@ const Header = () => {
               {session?.user?.name ? (
                 <button onClick={() => signOut()}> Sign out</button>
               ) : (
-                <Button href="/signup" style={{}} className="">
+                <Button href="/signup" style={{}} className="" onClick={false}>
                   Sign up
                 </Button>
               )}
