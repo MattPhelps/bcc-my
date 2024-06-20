@@ -65,7 +65,7 @@ const StylesPage = async ({ params }) => {
               paragraph="InkGen can generate design in many different tattoo styles. From intricate dotwork to minimalist sketches, from bold blackwork to broad-stroked watercolor tattoos - our AI-powered tattoo generator will create designs in the style that you love. Browse through our catalog of styles and discover the one you connect with the most."
             />
             <div className="wow fadeInUp text-center">
-              <Button href="/design" style={{}} className="">
+              <Button href="/design" style={{}} className="" onClick={false}>
                 Design your tattoo
               </Button>
             </div>
