@@ -7,13 +7,13 @@ import { signIn, useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import useLoginForm from "@/hooks/useLoginForm";
 
-const pageTitle = `Login to your InkGen account`;
-const pageDescription = `Design your own tattoos!`;
+// const pageTitle = `Login to your InkGen account`;
+// const pageDescription = `Design your own tattoos!`;
 
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-};
+// export const metadata: Metadata = {
+//   title: pageTitle,
+//   description: pageDescription,
+// };
 
 const LoginPage = () => {
   const { userData, errors, loading, onHandleInput, handleSubmit } = useLoginForm();
