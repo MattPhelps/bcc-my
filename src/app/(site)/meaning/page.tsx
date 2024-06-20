@@ -15,6 +15,7 @@ const MeaningPage = async () => {
           <PageTitle title="Tattoo Meanings"  paragraph=""   />
             <div className="wow fadeInUp text-center">
               <Button
+                onClick={false}
                 href="/design"
                 style={{ }}
                 className="">
