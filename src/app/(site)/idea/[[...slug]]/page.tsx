@@ -61,6 +61,7 @@ const IdeasPage = async ({ params }) => {
           <PageTitle title="Tattoo Ideas"  paragraph="Your next tattoo idea is waiting for you. Here you will find thousands of popular tattoo concepts for your next ink session. Browse through thousands of high-quality designs and discover the perfect tattoo that suits your personality and style."   />
             <div className="wow fadeInUp text-center">
               <Button
+                onClick={false}
                 href="/design"
                 style={{ }}
                 className="">
