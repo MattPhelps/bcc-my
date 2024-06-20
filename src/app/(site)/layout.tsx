@@ -6,15 +6,10 @@ import SessionProvider from "../../components/SessionProvider";
 import { getServerSession } from "next-auth";
 import { LayoutProvider } from "@/context/LayoutContext";
 import ClientContentWrapper from "@/components/ClientContentWrapper";
-import { usePathname } from 'next/navigation';
 
 export default async function RootLayout({ children,}: { children: React.ReactNode;}) {
-  const pathname = usePathname();
   const session = await getServerSession();
   const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
-
-  //Construct the canonical URL
-  const canonicalURL = `${siteConfig.siteURL}${pathname === '/' ? '' : pathname}`;
 
   return (
     <html lang="en">
