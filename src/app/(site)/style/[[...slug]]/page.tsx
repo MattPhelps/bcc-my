@@ -78,7 +78,7 @@ const StylesPage = async ({ params }) => {
                 allStyles.map((cell, index) => (
                   <Link
                     key={index}
-                    href={`style/${cell.slug}`}
+                    href={`style${cell.slug}`}
                     className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-8 mb-8 duration-100 ease-in hover:scale-105"
                   >
                     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
