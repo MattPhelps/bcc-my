@@ -2,7 +2,7 @@ import Image from "next/image";
 
 type propsType = {
   title: string;
-  paragraph: string;
+  paragraph?: string;
   center?: boolean;
   icon?: string;
 };

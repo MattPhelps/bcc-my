@@ -16,6 +16,12 @@ export async function generateStaticParams() {
   }));
 }
 
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+
+
 // export const metadata: Metadata = {
 //   title: "Meaning Detail",
 //   description: "Detailed view of a tattoo meanings",
@@ -104,42 +110,52 @@ const MeaningPage = async ({ params }) => {
       </>
     );
   } else if (slug.length === 1) {
-    // Single segment slug, show category of meanings
     const categorySlug = slug[0];
     const meanings = await getMeaningsBySlug(`/${categorySlug}`);
-    `/${slug}`;
+    
     if (!meanings.length) {
       return <p>No meanings found for this category</p>;
     }
     return (
-      <>
-        <section className="pt-3 pb-25">
-          <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
-            <h1 className="text-3xl font-bold">Meanings for {categorySlug}</h1>
-            <CellGrid data={meanings} rootSlug={`/meaning/${categorySlug}`} />
+      <section className="pt-3 pb-25">
+        <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-5">
+          <div className="flex justify-center">
+            <Breadcrumb />
           </div>
-        </section>
-      </>
+          <PageTitle title={`${capitalizeFirstLetter(categorySlug)} Tattoo Meaning`} />
+          <div className="wow fadeInUp content-container">
+            {meanings.map((meaning, index) => (
+              
+              <div key={index}>
+                <h2 className="text-xl font-bold mb-2">{meaning.name}</h2>
+                {/*
+                <p className="text-gray-600 text-sm dark:text-gray-400">{meaning.description}</p>  */}
+              </div>
+
+            ))}
+          </div>
+        </div>
+      </section>
     );
   } else {
     // Nested slug, show detailed meaning view
-    const nestedSlug = slug.join("/");
-    const meaning = await getMeaningBySlug(nestedSlug);
-    if (!meaning) {
-      return <p>Meaning not found</p>;
-    }
-    return (
-      <>
+      const nestedSlug = slug.join("/");
+      const meaning = await getMeaningBySlug(nestedSlug);
+      
+      if (!meaning) {
+        return <p>Meaning not found</p>;
+      }
+      return (
         <section className="pt-3 pb-25">
           <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
+            <Breadcrumb />
             <h1 className="text-3xl font-bold">{meaning.name}</h1>
-            {/* <img src={style.image} alt={style.name} className="w-full h-full object-cover object-center mt-4" />
-            <p className="mt-4">{style.description}</p> */}
+            {/* <img src={meaning.image} alt={meaning.name} className="w-full h-full object-cover object-center mt-4" />
+            <p className="mt-4">{meaning.description}</p> */}
           </div>
         </section>
-      </>
-    );
-  }
-};
+      );
+    }
+  };
 
 export default MeaningPage;
