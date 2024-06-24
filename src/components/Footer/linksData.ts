@@ -66,6 +66,13 @@ export const toolLink: FooterLink[] = [
   //  newTab: false,
   //},
   {
+    id: 14,
+    
+    title: "Tattoo Meanings",
+    href: "/meaning",
+    newTab: false,
+  },
+  {
     id: 9,
     title: "Pain Chart",
     href: "/pain-chart",
@@ -94,13 +101,6 @@ export const toolLink: FooterLink[] = [
     id: 13,
     title: "Removal Cost Calculator",
     href: "/removal-calculator",
-    newTab: false,
-  },
-  {
-    id: 14,
-    
-    title: "Tattoo Meanings",
-    href: "/meaning",
     newTab: false,
   },
   {

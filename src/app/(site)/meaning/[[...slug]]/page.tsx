@@ -73,11 +73,6 @@ const MeaningPage = async ({ params }) => {
               title="Tattoo Meanings"
               paragraph="Find out the meaning behind any tattoo design."
             />
-            <div className="wow fadeInUp text-center">
-              <Button href="/design" style={{}} className="" onClick={false}>
-                Design your tattoo
-              </Button>
-            </div>
             <div className="flex flex-wrap justify-center -mx-4 mt-24">
               {allMeanings.length > 0 ? (
                 allMeanings.map((cell, index) => (
@@ -92,8 +87,9 @@ const MeaningPage = async ({ params }) => {
                         alt={cell.name}
                         className="w-full h-56 object-cover object-center"
                       /> */}
+                      
                       <div className="p-4">
-                        <h2 className="text-xl font-bold mb-2">{cell.name}</h2>
+                        <h2 className="text-xl font-bold text-center mb-2">{cell.name}</h2>
                         <p className="text-gray-600 text-sm dark:text-gray-400">
                           {/* {cell.description} */}
                         </p>
