@@ -161,7 +161,7 @@ model Meaning {
   id          String     @default(cuid()) @id
   ideaId      String     @unique
   name        String
-  slug        String
+  slug        String     @unique
   text        String?
   createdAt   DateTime   @default(now()) @map(name: "created_at")
   updatedAt   DateTime   @updatedAt @map(name: "updated_at")

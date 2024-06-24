@@ -28,9 +28,8 @@ export const getStylesBySlug = async (slug: string) => {
 
 export const getStyleBySlug = async (slug: string) => {
   try {
-    const style = await prisma.style.findUnique({
-      where: { slug },
-    });
+    const style = await prisma.meaning.findUnique({
+      where: { slug },});
     return style;
   } catch (error) {
     console.error("Error fetching style:", error);

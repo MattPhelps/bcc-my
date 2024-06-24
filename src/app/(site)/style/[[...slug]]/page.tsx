@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
     if (style) {
       return {
         title: style.name,
-        description: style.description
+        description: style.text
       };
     } else {
       return {
