@@ -87,11 +87,11 @@ const MeaningPage = async ({ params }) => {
                     className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-8 mb-8 duration-100 ease-in hover:scale-105"
                   >
                     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-                      <img
+                      {/* <img
                         // src={cell.image}
                         alt={cell.name}
                         className="w-full h-56 object-cover object-center"
-                      />
+                      /> */}
                       <div className="p-4">
                         <h2 className="text-xl font-bold mb-2">{cell.name}</h2>
                         <p className="text-gray-600 text-sm dark:text-gray-400">
