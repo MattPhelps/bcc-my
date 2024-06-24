@@ -71,7 +71,7 @@ const MeaningPage = async ({ params }) => {
           </div>
             <PageTitle
               title="Tattoo Meanings"
-              paragraph="Find out the meaning behind all tattoo designs"
+              paragraph="Find out the meaning behind any tattoo design."
             />
             <div className="wow fadeInUp text-center">
               <Button href="/design" style={{}} className="" onClick={false}>
