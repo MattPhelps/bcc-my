@@ -9,5 +9,6 @@ User-agent: *
 Disallow: /login
 Disallow: /signup
 Disallow: /design
+Disallow: /idea
 
 Sitemap: https://inkgen.ai/sitemap.xml

@@ -11,7 +11,7 @@ const helpFaqData: FAQ[] = [
     id: 101,
     question: `How much does InkGen cost?`,
     answer:
-     `BlackInk.AI is free to try. You can generate 5 times for free. After that, you can subscribe to the Pro Unlimited Plan.`,
+     `InkGen is free to try. You can generate 5 times for free. After that, you can subscribe to the Pro Unlimited Plan.`,
   },
   {
     id: 102,
