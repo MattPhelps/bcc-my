@@ -162,7 +162,7 @@ model Meaning {
   ideaId      String     @unique
   name        String
   slug        String     @unique
-  text        String?
+  description String
   createdAt   DateTime   @default(now()) @map(name: "created_at")
   updatedAt   DateTime   @updatedAt @map(name: "updated_at")
   idea        Idea       @relation(fields: [ideaId], references: [id])

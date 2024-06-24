@@ -125,13 +125,9 @@ const MeaningPage = async ({ params }) => {
           <PageTitle title={`${capitalizeFirstLetter(categorySlug)} Tattoo Meaning`} />
           <div className="wow fadeInUp content-container">
             {meanings.map((meaning, index) => (
-              
               <div key={index}>
-                <h2 className="text-xl font-bold mb-2">{meaning.name}</h2>
-                {/*
-                <p className="text-gray-600 text-sm dark:text-gray-400">{meaning.description}</p>  */}
+                <p>{meaning.description}</p>
               </div>
-
             ))}
           </div>
         </div>
