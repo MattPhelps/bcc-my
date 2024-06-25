@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Headline from "@/components/Common/Headline";
+
 const pageTitle = `Tattoo Pain Chart`;
 const pageDescription = ``;
 

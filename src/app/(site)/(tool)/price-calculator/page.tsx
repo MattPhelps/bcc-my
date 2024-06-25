@@ -1,9 +1,7 @@
-'use client'
 import Headline from '@/components/Common/Headline';
 import PriceCalculator from './PriceCalculator';
 import { Metadata } from 'next';
 
-{/* 
 const pageTitle = `Tattoo Price Calculator`;
 const pageDescription = `Estimate the cost of your next tattoo with our easy-to-use price calculator. Simply select the size, style, location, level of detail, and artist experience for your desired tattoo, and we'll provide you with an estimated price range. Please note that this is a rough estimate, and the final cost may vary based on additional factors and the artist's rates.`;
 
@@ -11,8 +9,6 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
 };
-*/}
-
 
 const PriceCalculatorPage = () => {
 
@@ -27,8 +23,8 @@ const PriceCalculatorPage = () => {
            />
 
           <div className="content-container">
-          <PriceCalculator />
 
+          {/* <PriceCalculator /> */}
 
           <h2 className="mt-24 mb-8 text-3xl font-bold">Factors That Influence Tattoo Prices</h2>
           <p className="mt-4">When it comes to getting a tattoo, the cost can vary significantly depending on several factors. Our tattoo price calculator takes into account some of the most important factors that determine the final price of your tattoo:</p>
