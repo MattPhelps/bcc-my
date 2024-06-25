@@ -97,7 +97,7 @@ const IdeasPage = async ({ params }) => {
             <Breadcrumb />
           </div>
           <PageTitle title={`${ideaName} Tattoo Ideas`} paragraph={`${ideaName}`} />
-
+             {/* Insert link to the tattoo meaning */}
           {/* Insert the idea designs here */}
         
           </div> 
