@@ -13,7 +13,7 @@ const PageTitle = ({
   icon = "/images/hero/icon-title.svg",
 }: propsType) => {
   return (
-    <div className="wow fadeInUp mb-16 text-center relative z-10">
+    <div className="wow fadeInUp mb-6 text-center relative z-10">
 
       <h1 className="text-[black] dark:text-[white] mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
         {title}
