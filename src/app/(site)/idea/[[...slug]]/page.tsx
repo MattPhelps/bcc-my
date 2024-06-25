@@ -83,10 +83,9 @@ const IdeasPage = async ({ params }) => {
   } else if (slug.length === 1) {
     // Single segment slug, show category of ideas
     const categorySlug = slug[0];
-    const ideaName = capitalizeFirstLetter(categorySlug)
-    const ideas = await getIdeasBySlug(`/${categorySlug}`); `/${slug}`
-    if (!ideas.length) {
-      return <p>No ideas found for this category</p>;
+    const idea = await getIdeaBySlug(`/${categorySlug}`); `/${slug}`
+    if (!idea.name) {
+      return <p>This idea doesn't exist!</p>;
     }
     return (
       <>
@@ -96,7 +95,7 @@ const IdeasPage = async ({ params }) => {
           <div className="flex justify-center">
             <Breadcrumb />
           </div>
-          <PageTitle title={`${ideaName} Tattoo Ideas`} paragraph={`${ideaName}`} />
+          <PageTitle title={`${idea.name} Tattoo Ideas`} paragraph={`${idea.description}`} />
              {/* Insert link to the tattoo meaning */}
           {/* Insert the idea designs here */}
         
