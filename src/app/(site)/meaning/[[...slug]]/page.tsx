@@ -1,8 +1,5 @@
-import CellGrid from "@/components/CellGrid";
-import Button from "@/components/Common/Button";
 import PageTitle from "@/components/Common/PageTitle";
 import { getAllMeanings, getMeaningsBySlug, getMeaningBySlug} from "@/libs/services/meaningService";
-import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
@@ -20,12 +17,6 @@ const capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-
-
-// export const metadata: Metadata = {
-//   title: "Meaning Detail",
-//   description: "Detailed view of a tattoo meanings",
-// };
 export async function generateMetadata({ params }) {
   const { slug } = params;
   
@@ -36,10 +27,11 @@ export async function generateMetadata({ params }) {
     };
   } else if (slug.length === 1) {
     const categorySlug = slug[0];
+    const meaningName = capitalizeFirstLetter(categorySlug)
     const meanings = await getMeaningsBySlug(`/${categorySlug}`);
     return {
-      title: `Meanings for ${categorySlug}`,
-      description: `Discover tattoo meanings in the category: ${categorySlug}`
+      title: `${meaningName} Tattoo Meaning`,
+      description: `Discover the meaning behind ${meaningName} tattoos. Learn the history, symbolism, and cultural significance of ${meaningName} tattoos, and get inspired for your next ink. Understand the deeper message of your body art today!`
     };
   } else {
     const nestedSlug = slug.join('/');
@@ -126,7 +118,8 @@ const MeaningPage = async ({ params }) => {
               </div>
             ))}
           </div>
-        </div>
+        
+         </div>
       </section>
     );
   } else {

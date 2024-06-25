@@ -105,9 +105,9 @@ model Favorite {
 }
 
 model Idea {
-  id          String       @default(cuid()) @id
+  id          String       @id @default(cuid())
   name        String       @unique
-  slug        String      @unique
+  slug        String       @unique
   image       String?
   description String?
   designs     DesignsIdeas[]

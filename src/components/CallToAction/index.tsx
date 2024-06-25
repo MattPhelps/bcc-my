@@ -12,7 +12,7 @@ const CallToAction = ({ heading, description, buttonText, buttonSlug }) => {
             <h2 className="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
               {heading}
             </h2>
-            <p className="max-w-[714px] mx-auto font-medium mb-9">
+            <p className="max-w-[714px] text-white mx-auto font-medium mb-9">
               {description}
             </p>
             <Button
