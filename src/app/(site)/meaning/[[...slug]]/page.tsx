@@ -99,9 +99,9 @@ const MeaningPage = async ({ params }) => {
     );
   } else if (slug.length === 1) {
     const categorySlug = slug[0];
-    const meanings = await getMeaningsBySlug(`/${categorySlug}`);
+    const meaning = await getMeaningBySlug(`/${categorySlug}`);
     
-    if (!meanings.length) {
+    if (!meaning.name) {
       return <p>No meanings found for this category</p>;
     }
     return (
@@ -111,12 +111,15 @@ const MeaningPage = async ({ params }) => {
             <Breadcrumb />
           </div>
           <PageTitle title={`${capitalizeFirstLetter(categorySlug)} Tattoo Meaning`} />
+
           <div className="wow fadeInUp content-container">
-            {meanings.map((meaning, index) => (
-              <div key={index}>
-                <p>{meaning.description}</p>
-              </div>
-            ))}
+            <p>{meaning.description}</p>
+          </div>
+
+          <div className="text-center mt-8 mb-4 text-sm text-blue-500 underline">
+            <Link href={`/idea${meaning.slug}`}>
+              {`${meaning.name} Tattoo Ideas`}
+            </Link>
           </div>
         
          </div>
