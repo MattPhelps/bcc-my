@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   const results = [];
-  const filePath = path.join(__dirname, 'ideas_meanings.csv');
+  const filePath = path.join(__dirname, 'ideas.csv');
 
   // Read CSV file
   fs.createReadStream(filePath)

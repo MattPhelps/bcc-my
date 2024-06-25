@@ -3,7 +3,7 @@ import Headline from "@/components/Common/Headline";
 import CallToAction from "@/components/CallToAction";
 
 const pageTitle = `Tattoo Size Chart`;
-const pageDescription = ``;
+const pageDescription = `Explore our comprehensive Tattoo Size Chart to help you plan your next tattoo. Find detailed information on various tattoo sizes, placement options, and tips to ensure you choose the perfect size for your design. Get started with our easy-to-use chart and make an informed decision for your body art.`;
 
 export const metadata: Metadata = {
   title: pageTitle,

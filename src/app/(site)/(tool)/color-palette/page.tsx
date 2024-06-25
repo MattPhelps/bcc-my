@@ -3,7 +3,7 @@ import Headline from "@/components/Common/Headline";
 import Head from "next/head";
 
 const pageTitle = `Tattoo Color Palette`;
-const pageDescription = ``;
+const pageDescription = `Explore our Tattoo Color Palette to find the perfect hues for your next tattoo. Discover a wide range of colors, see how they look on different skin tones, and get tips on choosing the best color combinations for your design. Bring your tattoo vision to life with our expert color guidance.`;
 
 const ColorPalettePage = () => {
   return (

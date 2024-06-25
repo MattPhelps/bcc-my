@@ -1,4 +1,5 @@
-import { useState } from "react";
+'use client'
+import { useState } from "react"
 import Headline from "@/components/Common/Headline";
 import Button from "@/components/Common/Button";
 import { getRandomTattooDesign } from "@/libs/services/designService";
@@ -8,10 +9,12 @@ import { Metadata } from "next";
 const pageTitle = `Random Tattoo Generator`;
 const pageDescription = `Generate random tattoo designs for inspiration. Click to discover unique tattoo ideas and find your perfect design.`;
 
+{/* 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
 };
+*/}
 
 const IdeaGeneratorPage = () => {
   const [randomDesign, setRandomDesign] = useState(null);

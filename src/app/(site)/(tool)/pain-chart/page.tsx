@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Headline from "@/components/Common/Headline";
 
 const pageTitle = `Tattoo Pain Chart`;
-const pageDescription = ``;
+const pageDescription = `Understand the pain levels associated with different tattoo placements using our Tattoo Pain Chart. Find out which areas are the most and least painful, and get tips on how to manage tattoo pain. Plan your next tattoo with confidence using our comprehensive pain chart.`;
 
 export const metadata: Metadata = {
   title: pageTitle,
