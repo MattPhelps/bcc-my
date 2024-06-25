@@ -4,13 +4,13 @@ const menuData: Menu[] = [
 
 {
   id: 1,
-  title: "Ideas",
+  title: "Tattoo Ideas",
    newTab: false,
    path: "/idea",
 },
 {
   id: 2,
-  title: "Styles",
+  title: "Tattoo Styles",
   newTab: false,
   path: "/style",
 }
