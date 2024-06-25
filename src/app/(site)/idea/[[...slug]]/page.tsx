@@ -14,11 +14,10 @@ export async function generateStaticParams() {
   }));
 }
 
-// export const metadata: Metadata = {
-//   title: "Ideas",
-//   description: "Discover tattoo ideas"
-// };
-// Function to generate dynamic metadata
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 export async function generateMetadata({ params }) {
   const { slug } = params;
   
@@ -29,10 +28,11 @@ export async function generateMetadata({ params }) {
     };
   } else if (slug.length === 1) {
     const categorySlug = slug[0];
+    const ideaName = capitalizeFirstLetter(categorySlug)
     const ideas = await getIdeasBySlug(`/${categorySlug}`);
     return {
-      title: `Ideas for ${categorySlug}`,
-      description: `Discover tattoo ideas in the category: ${categorySlug}`
+      title: `${ideaName} Tattoo Ideas`,
+      description: `Explore stunning ${categorySlug} tattoo ideas. Find inspiration and creative designs for your next ink with our curated collection of ${categorySlug} tattoos. Perfect if you're looking to express your unique style.`
     };
   } else {
     const nestedSlug = slug.join('/');

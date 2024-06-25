@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
     const meanings = await getMeaningsBySlug(`/${categorySlug}`);
     return {
       title: `${meaningName} Tattoo Meaning`,
-      description: `Discover the meaning behind ${meaningName} tattoos. Learn the history, symbolism, and cultural significance of ${meaningName} tattoos, and get inspired for your next ink. Understand the deeper message of your body art today!`
+      description: `Discover the meaning behind ${categorySlug} tattoos. Learn the history, symbolism, and cultural significance of ${categorySlug} tattoos, and get inspired for your next ink. Understand the deeper message of your body art today!`
     };
   } else {
     const nestedSlug = slug.join('/');

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PageTitle from "../../../components/Common/PageTitle";
 
 const pageTitle = `About InkGen`;
-const pageDescription = ``;
+const pageDescription = `At InkGen, we believe that the tattoo experience should be seamless and enjoyable from start to finish. So whether you're a tattoo enthusiast, a first-timer, or a tattoo artist, we invite you to explore what InkGen has to offer.`;
 
 export const metadata: Metadata = {
   title: pageTitle,
