@@ -23,8 +23,8 @@ export async function generateMetadata({ params }) {
   
   if (!slug) {
     return {
-      title: "Ideas",
-      description: "Discover tattoo ideas"
+      title: "Tattoo Ideas: Explore 10,000+ Unique Designs for Inspiration",
+      description: "Discover endless tattoo ideas for every style and personality. Browse our comprehensive guide to find inspiration for your next tattoo, from classic designs to modern trends. Perfect for anyone looking to explore diverse tattoo styles and concepts."
     };
   } else if (slug.length === 1) {
     const categorySlug = slug[0];
