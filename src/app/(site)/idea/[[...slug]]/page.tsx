@@ -83,6 +83,7 @@ const IdeasPage = async ({ params }) => {
   } else if (slug.length === 1) {
     // Single segment slug, show category of ideas
     const categorySlug = slug[0];
+    const ideaName = capitalizeFirstLetter(categorySlug)
     const ideas = await getIdeasBySlug(`/${categorySlug}`); `/${slug}`
     if (!ideas.length) {
       return <p>No ideas found for this category</p>;
@@ -90,10 +91,16 @@ const IdeasPage = async ({ params }) => {
     return (
       <>
         <section className="pt-3 pb-25">
-          <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
-            <h1 className="text-3xl font-bold">Ideas for {categorySlug}</h1>
-            <CellGrid data={ideas} rootSlug={`/idea/${categorySlug}`} />
+          <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-5">
+            
+          <div className="flex justify-center">
+            <Breadcrumb />
           </div>
+          <PageTitle title={`${ideaName} Tattoo Ideas`} paragraph={`${ideaName}`} />
+
+          {/* Insert the idea designs here */}
+        
+          </div> 
         </section>
       </>
     );
