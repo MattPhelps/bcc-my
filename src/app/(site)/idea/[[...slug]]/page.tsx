@@ -120,7 +120,9 @@ const IdeasPage = async ({ params }) => {
               ))}
             </div>
           ) : (
-            <p className="text-center text-[red] mt-20">No designs found for this idea.</p>
+            <p className="text-center text-[green] mt-20"><a href="https://inkgen.ai/design" className="text-green underline">
+            Generate the first {`${idea.name}`} design
+          </a></p>
           )}
              {/* Insert link to the tattoo meaning */}
           {/* Insert the idea designs here */}
