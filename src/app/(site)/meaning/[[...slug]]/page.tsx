@@ -110,7 +110,7 @@ const MeaningPage = async ({ params }) => {
           <div className="flex justify-center">
             <Breadcrumb />
           </div>
-          <PageTitle title={`${capitalizeFirstLetter(categorySlug)} Tattoo Meaning`} />
+          <PageTitle title={`${meaning.name} Tattoo Meaning`} />
 
           <div className="wow fadeInUp content-container">
             <p>{meaning.description}</p>
