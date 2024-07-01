@@ -85,7 +85,7 @@ const IdeasPage = async ({ params }) => {
   } else if (slug.length === 1) {
     // Single segment slug, show category of ideas
     const categorySlug = slug[0];
-    const idea = await getIdeaBySlug(`/${categorySlug}`); `/${slug}`
+    const idea = await getIdeaBySlug(`${categorySlug}`); `${slug}`
     const designs = await getAllDesignsByIdea(categorySlug);
     if (!idea.name) {
       return <p>This idea doesn't exist!</p>;
