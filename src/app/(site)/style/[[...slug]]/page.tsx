@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
     const categorySlug = slug[0];
     const styles = await getStylesBySlug(`/${categorySlug}`);
     return {
-      title: `Styles for ${categorySlug}`,
+      title: `${categorySlug} Tattoo Style`,
       description: `Discover tattoo styles in the category: ${categorySlug}`
     };
   } else {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
     if (style) {
       return {
         title: style.name,
-        description: style.text
+        // description: style.text
       };
     } else {
       return {
@@ -117,7 +117,7 @@ const StylesPage = async ({ params }) => {
         <section className="pt-3 pb-25">
           <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
             <h1 className="text-3xl font-bold">Styles for {categorySlug}</h1>
-            <CellGrid data={styles} rootSlug={`/style/${categorySlug}`} />
+            {/* Insert styles page data */}
           </div>
         </section>
       </>
