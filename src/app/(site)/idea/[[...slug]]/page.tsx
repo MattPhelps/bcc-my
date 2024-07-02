@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   } else if (slug.length === 1) {
     const categorySlug = slug[0];
     const ideaName = capitalizeFirstLetter(categorySlug)
-    const ideas = await getIdeasBySlug(`${categorySlug}`);
+    const ideas = await getIdeasBySlug(`/${categorySlug}`);
     return {
       title: `${ideaName} Tattoo Ideas`,
       description: `Explore stunning ${categorySlug} tattoo ideas. Find inspiration and creative designs for your next ink with our curated collection of ${categorySlug} tattoos. Perfect if you're looking to express your unique style.`
@@ -85,7 +85,7 @@ const IdeasPage = async ({ params }) => {
   } else if (slug.length === 1) {
     // Single segment slug, show category of ideas
     const categorySlug = slug[0];
-    const idea = await getIdeaBySlug(`${categorySlug}`); `${slug}`
+    const idea = await getIdeaBySlug(`/${categorySlug}`); `/${slug}`
     const designs = await getAllDesignsByIdea(categorySlug);
     if (!idea.name) {
       return <p>This idea doesn't exist!</p>;
