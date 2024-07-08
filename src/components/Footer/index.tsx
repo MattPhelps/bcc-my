@@ -19,25 +19,24 @@ const Footer = () => {
                   <h3>{siteConfig.siteName}</h3>
                 </a>
               </div>
-
+{/* 
               <div className="mb-4 mt-4">
                 <SocialLinkList/>
               </div>
-
+*/}
               <p className={`mb-6 xl:w-4/5 text-[black]/70`}>
-              InkGen is an AI tattoo generator tool that will help you design the tattoo of your dreams.
+              {siteConfig.siteName} is a credit card comparison website to help you find the best deal.
               </p>
             
 
               <p style={{ fontSize: '12px' }} className={`mt-6 text-[black]/70 font-small"`}>
-               © 2024 All Rights Reserved, InkGen
+               © 2024 All Rights Reserved, {siteConfig.siteName}
               </p>
             </div>
             
             <div className="max-w-[571px] w-full">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-10">
                 <FooterLinkList title="Company" links={companyLink} />
-                <FooterLinkList title="Resources" links={toolLink} />
                 <FooterLinkList title="Legal" links={legalLink} />
               </div>
             </div>

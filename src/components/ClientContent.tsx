@@ -23,3 +23,4 @@ const ClientContent = ({ children, hideHeader }: { children: React.ReactNode, hi
 };
 
 export default ClientContent;
+ 

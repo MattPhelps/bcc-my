@@ -86,25 +86,12 @@ const Header = () => {
             </nav>
             
             <div className="flex items-center gap-6 mt-7 lg:mt-0">
-               <Button
-               onClick={false}
-                href="/login"
-                bgColor="bg-[#f3f3f3]"
-                hoverColor="hover:bg-[#e1e4e6]"
-                textColor="text-[#000]"
-                style={{ }}
-                className=""
-              >
-                Log in
-              </Button> 
+               
 
-              {session?.user?.name ? (
-                <button onClick={() => signOut()}> Sign out</button>
-              ) : (
+            
                 <Button href="/signup" style={{}} className="" onClick={false}>
                   Sign up
                 </Button>
-              )}
             </div>
           </div>
         </div>
