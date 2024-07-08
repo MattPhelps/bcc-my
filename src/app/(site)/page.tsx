@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import siteConfig from '../../../siteConfig';
 import Hero from "@/components/Home/Hero";
 import Features from "@/components/Home/Features";
-import Reviews from "@/components/Home/Reviews";
 import Faq from "@/components/Faq";
 import CallToAction from "@/components/CallToAction";
 import homeFaqData from '@/components/Faq/faqData';

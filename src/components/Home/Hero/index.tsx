@@ -19,14 +19,7 @@ const Hero = () => {
 
             <p className="max-w-[714px] text-center text-[black] dark:text-[white] mb-8 mx-auto font-small">{siteConfig.siteName}</p>
           
-          <Button
-            href="/design"
-            onClick={false}
-            style={{ }}
-            className=""
-          >
-            Try for free
-          </Button>
+         
 
         </div>
     </section>
