@@ -4,20 +4,20 @@ import siteConfig from '../../../../siteConfig';
 const featuresData: Feature[] = [
   {
     id: 11,
-    title: "Pick an Image",
-    description: `1. Input the details of the porn you want to generate`,
+    title: "Enter your idea",
+    description: `1. Enter your tattoo idea in the prompt input field. Describe your tattoo and be as descriptive as you like! Let your imagination roam free, no concept is too complex.`,
     icon: "/images/how-to/copy.svg",
   },
   {
     id: 27,
-    title: "Upload",
-    description: `2. Click "Upload" and wait`,
+    title: "Select style and color",
+    description: `2. Next, select the style for your tattoo. Do you prefer dotwork or a minimalist tattoo style? Choose the style you want from our wide range of options in the menu dropdown.`,
     icon: "/images/how-to/paste.svg",
   },
   {
     id: 21,
-    title: "Enjoy!",
-    description: `3. Your Nudified image will be shown on the screen. Click "Download" and your done!`,
+    title: "Get your tattoo design",
+    description: `3. Now it's time for our AI start working! Wait a moment for our AI tattoo artist to present you with a few unique concepts based on the inputs which you've provided!`,
     icon: "/images/how-to/download.svg",
   },
 ];

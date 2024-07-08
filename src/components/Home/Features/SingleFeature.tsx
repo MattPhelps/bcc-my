@@ -16,7 +16,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <h4 className="font-semibold text-lg text-[black] dark:text-[white] mb-4">
           {feature.title}
         </h4>
-        <p className="font-medium">{feature.description}</p>
+        <p className="font-medium text-[black]/70">{feature.description}</p>
       </div>
     </div>
   );

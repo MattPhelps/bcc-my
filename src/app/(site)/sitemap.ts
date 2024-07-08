@@ -2,8 +2,9 @@
 import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
+import siteConfig from '../../../siteConfig';
 
-const BASE_URL = 'https://watermarkremover.co'; // Replace with your domain
+const BASE_URL = siteConfig.siteURL; // Replace with your domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pagesDirectory = path.join(process.cwd(), 'src/app/(site)');

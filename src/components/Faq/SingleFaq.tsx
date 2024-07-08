@@ -52,7 +52,7 @@ const SingleFaq = ({ faqData }: { faqData: FaqData }) => {
         }}
       >
         <div className={`overflow-hidden transition-all duration-300`}>
-          <div className="pb-6 pt-1 font-medium">{answer}</div>
+          <div className="pb-6 pt-1 text-[black]/70 font-medium">{answer}</div>
         </div>
       </div>
     </div>

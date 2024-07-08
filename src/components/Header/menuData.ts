@@ -4,16 +4,24 @@ const menuData: Menu[] = [
 
 {
   id: 1,
-    title: "Remove Watermark",
+  title: "Tattoo Ideas",
    newTab: false,
-   path: "/upload",
+   path: "/idea",
 },
 {
   id: 2,
-    title: "How to Use",
-   newTab: false,
-   path: "/#how-to-use",
+  title: "Tattoo Styles",
+  newTab: false,
+  path: "/style",
 }
+
+//{
+//  id: 3,
+//    title: "Pricing",
+//   newTab: false,
+//   path: "/pricing",
+//} 
+
 
 ];
 

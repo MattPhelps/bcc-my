@@ -9,9 +9,9 @@ const Features = () => {
       id="how-to-use"
       className="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
     >
-      <div className="max-w-[1222px] mx-auto px-4 pt-30 sm:px-8 xl:px-0">
+      <div className="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
         <SectionTitle
-          title={`How to Remove a Watermark`}
+          title={`How Does it Work?`}
           paragraph=""
         />
 
