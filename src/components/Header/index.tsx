@@ -8,12 +8,10 @@ import menuData from "./menuData";
 import DropDown from "./DropDown";
 import siteConfig from "../../../siteConfig";
 import Button from "@/components/Common/Button";
-import { signOut, useSession } from "next-auth/react";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const pathUrl = usePathname();
-  const { data: session } = useSession();
 
   return (
     <>
