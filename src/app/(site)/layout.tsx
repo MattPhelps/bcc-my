@@ -2,10 +2,8 @@ import React from "react";
 import "../../styles/animate.css";
 import "../../styles/tailwind.css";
 import siteConfig from "../../../siteConfig";
-import SessionProvider from "../../components/SessionProvider";
 import { getServerSession } from "next-auth";
 import { LayoutProvider } from "@/context/LayoutContext";
-import ClientContentWrapper from "@/components/ClientContentWrapper";
 
 export default async function RootLayout({ children,}: { children: React.ReactNode;}) {
   const session = await getServerSession();
@@ -46,11 +44,7 @@ export default async function RootLayout({ children,}: { children: React.ReactNo
       </head>
 
       <body className="bg-white  dark:bg-dark">
-        <SessionProvider session={session}>
-          <LayoutProvider>
-            <ClientContentWrapper>{children}</ClientContentWrapper>
-          </LayoutProvider>
-        </SessionProvider>
+            {children}
       </body>
     </html>
   );
