@@ -2,11 +2,8 @@ import React from "react";
 import "../../styles/animate.css";
 import "../../styles/tailwind.css";
 import siteConfig from "../../../siteConfig";
-import { getServerSession } from "next-auth";
-import { LayoutProvider } from "@/context/LayoutContext";
 
 export default async function RootLayout({ children,}: { children: React.ReactNode;}) {
-  const session = await getServerSession();
   const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
 
   return (
@@ -43,7 +40,7 @@ export default async function RootLayout({ children,}: { children: React.ReactNo
         />
       </head>
 
-      <body className="bg-white  dark:bg-dark">
+      <body className="bg-white">
             {children}
       </body>
     </html>
