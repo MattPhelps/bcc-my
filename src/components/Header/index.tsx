@@ -87,7 +87,7 @@ const Header = () => {
                
 
             
-                <Button href="/signup" style={{}} className="" onClick={false}>
+                <Button href="/about" style={{}} className="" onClick={false}>
                   Sign up
                 </Button>
             </div>

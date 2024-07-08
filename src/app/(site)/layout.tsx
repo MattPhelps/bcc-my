@@ -2,6 +2,8 @@ import React from "react";
 import "../../styles/animate.css";
 import "../../styles/tailwind.css";
 import siteConfig from "../../../siteConfig";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default async function RootLayout({ children,}: { children: React.ReactNode;}) {
   const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TAG; // Replace with your GA tracking ID
@@ -41,7 +43,9 @@ export default async function RootLayout({ children,}: { children: React.ReactNo
       </head>
 
       <body className="bg-white">
+        <Header />
             {children}
+            <Footer />
       </body>
     </html>
   );
