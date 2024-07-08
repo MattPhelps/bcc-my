@@ -5,7 +5,7 @@ const siteConfig = {
   shortURL: "cc.template",
   siteTitle: "Best Credit Cards in CC - Top 10",
   siteDescription: "",
-  faviconPath: "/favicons.ico",
+  faviconPath: "/favicon.ico",
   emailFormLink: "https://formspree.io/f/xwkgkdjq",
   buttonColor: "#685cf4",
   buttonColor2: "#ff9900",
