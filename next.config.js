@@ -22,4 +22,3 @@ const { URL } = require('url');
       ],
     },
   };
-};
