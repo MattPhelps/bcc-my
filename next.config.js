@@ -8,17 +8,6 @@
 const { URL } = require('url');
 
 /** @type {import('next').NextConfig} */
-module.exports = () => {
-  const wordpressUrl = process.env.WORDPRESS_API_URL;
-
-  if (!URL.canParse(wordpressUrl)) {
-    throw new Error(`
-      Please provide a valid WordPress instance URL.
-      Add to your environment variables WORDPRESS_API_URL.
-    `);
-  }
-
-  const { protocol, hostname, port, pathname } = new URL(wordpressUrl);
 
   return {
     images: {
