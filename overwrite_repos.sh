@@ -14,6 +14,9 @@ CONFIG_FILE="siteConfig.js"
 repos=(
     # Add more repositories as needed
     "https://github.com/mattphelps/bcc-in"
+    "https://github.com/mattphelps/bcc-uk"
+    "https://github.com/mattphelps/bcc-de"
+    "https://github.com/mattphelps/bcc-my"
 )
 
 # Function to update siteConfig
