@@ -65,49 +65,6 @@ export const toolLink: FooterLink[] = [
   //  href: "/blog",
   //  newTab: false,
   //},
-  {
-    id: 14,
-    
-    title: "Tattoo Meanings",
-    href: "/meaning",
-    newTab: false,
-  },
-  {
-    id: 9,
-    title: "Pain Chart",
-    href: "/pain-chart",
-    newTab: false,
-    
-  },
-  {
-    id: 10,
-    title: "Size Chart",
-    href: "/size-chart",
-    newTab: false,
-  },
-  {
-    id: 11,
-    title: "Placement Chart",
-    href: "/placement-chart",
-    newTab: false,
-  },
-  {
-    id: 12,
-    title: "Price Calculator",
-    href: "/price-calculator",
-    newTab: false,
-  },
-  {
-    id: 13,
-    title: "Removal Cost Calculator",
-    href: "/removal-calculator",
-    newTab: false,
-  },
-  {
-    id: 15,
-    
-    title: "Color Palette",
-    href: "/color-palette",
-    newTab: false,
-  },
+  
+ 
 ];
