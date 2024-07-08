@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-const BASE_URL = 'https://inkgen.ai'; // Replace with your domain
+const BASE_URL = 'https://watermarkremover.co'; // Replace with your domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pagesDirectory = path.join(process.cwd(), 'src/app/(site)');

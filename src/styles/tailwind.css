@@ -26,49 +26,6 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
   }
 
-    /* FOR ALL PAGES WITH TEXT CONTENT */
-  .content-container {
-    max-width: 700px; 
-    margin: 0 auto; 
-    line-height: 1.75;
-    font-size: 1.1em;
-
-  @media screen and (max-width: 640px) {
-    padding: 0 10px;
-  }
-  }
-
-  .content-container p {
-    color: #000000CC;
-  }
-
-  .content-container a {
-    color: rgba(0, 186, 255, 0.9);
-    text-decoration: underline; 
-  }
-
-.content-container h1, 
-.content-container h2, 
-.content-container h3, 
-.content-container h4, 
-.content-container h5 {
-  color: #000 !important;
-}
-
-/* FOR BREADCRUMBS */
-.breadcrumb-container {
-  max-width: 700px; 
-  margin: 0 auto; 
-  line-height: 1.75;
-
-@media screen and (max-width: 640px) {
-  padding: 0 10px;
-}
-}
-
-
-  /* END text color styling */
-
   .hero-bg {
     background: linear-gradient(
       90deg,
@@ -131,7 +88,7 @@
   }
 
   .box-hover {
-    @apply before:duration-500 before:transition-opacity before:blur-[100px] before:opacity-0  before:rounded-full before:w-96 before:h-96 before:z-30 before:absolute before:-top-48 before:-left-48 before:pointer-events-none before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 after:duration-500 after:transition-opacity after:opacity-0 after:rounded-[inherit] after:z-10 after:inset-0 after:absolute hover:after:opacity-100 after:box-bg;
+    @apply before:duration-500 before:transition-opacity before:blur-[100px] before:opacity-0 before:bg-purple before:rounded-full before:w-96 before:h-96 before:z-30 before:absolute before:-top-48 before:-left-48 before:pointer-events-none before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] hover:before:opacity-20 after:duration-500 after:transition-opacity after:opacity-0 after:rounded-[inherit] after:z-10 after:inset-0 after:absolute hover:after:opacity-100 after:box-bg;
   }
   .box-hover-small {
     @apply before:!blur-[50px] before:w-48 before:h-48 before:-top-24 before:-left-24;
@@ -268,6 +225,7 @@
   }
   .button-styling {
     box-shadow: 0px -3px 10px 0px #00000040 inset;
+    background: var(--main-color);
   }
   /* .hero-button-gradient {
     box-shadow: 0px -3px 10px 0px #00000040 inset;
@@ -422,9 +380,12 @@
     );
   }
   .form-box-gradient-light {
-    background: #f3f3f3
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.055) 0%,
+      rgba(34, 33, 33, 0) 100%
+    );
   }
-
   .form-box-gradient:before {
     @apply gradient-border;
     background: linear-gradient(

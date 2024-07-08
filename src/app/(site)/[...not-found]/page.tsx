@@ -43,11 +43,11 @@ export default function NotFound() {
         404 Page not found
       </h2>
       <p className="text-md text-center  pb-2">
-        Oops! The page you are looking for does not exist. It may have been moved or deleted.
+      Oops! The page you are looking for does not exist. It may have been moved or deleted.
       </p>
       <div className="flex justify-center items-center mt-6">
      <Link  style={{ "--main-color": siteConfig.buttonColor } as any}
-      className="button-styling bg-[#8b3eff] inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
+      className="button-styling bg-blue-500 inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
       href="/">Return Home</Link>
       </div>
       </div>

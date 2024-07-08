@@ -2,9 +2,10 @@ import SupportSection from "@/components/Support";
 import { Metadata } from "next";
 import siteConfig from '../../../../siteConfig';
 import PageTitle from "../../../components/Common/PageTitle";
-import SinglePricing from "@/components/Pricing/SinglePricing";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const pageTitle = `DMCA Copyright Infringement Notification`;
+const pageTitle = `DMCA | ${siteConfig.siteName}`;
 const pageDescription = `Read our comprehensive DMCA disclaimer to understand how to file a copyright infringement. We clarify our responsibilities and user obligations to ensure informed and lawful use of our website.`;
 
 export const metadata: Metadata = {
@@ -16,14 +17,14 @@ const DMCAPage = () => {
 
   return (
     <>
+    <Header />
       <section className="pt-3 pb-25">
-        <div className="max-w-[1170px] text-[black]/80 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
+        <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
           
-          <PageTitle title="Official DMCA Copyright Infringement Notification" paragraph={siteConfig.lastUpdated} />
+          <PageTitle title="Official DMCA Copyright Infringement Notification" paragraph="Updated: February 19th, 2024" />
           
           
           <div className="mt-8">
-          <div className="content-container">
             <p>Our website follows the safe harbor provisions of 17 U.S.C. §512, otherwise known as Digital Millennium Copyright Act (“DMCA”). To file a copyright infringement notification with us, you will need to send a written communication that includes substantially the following:</p>
             
             <ul className="mt-4 list-disc pl-6">
@@ -38,8 +39,8 @@ const DMCAPage = () => {
             <p className="mt-4">Then Send the infringement notice via email to {siteConfig.supportEmail}.</p>
           </div>
         </div>
-        </div>
       </section>
+      <Footer /> 
     </>
   );
 };

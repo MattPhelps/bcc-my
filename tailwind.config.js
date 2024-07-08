@@ -36,6 +36,24 @@ module.exports = {
         7: "#0F0C1F",
         8: "#100D20",
       },
+      purple: {
+        DEFAULT: "#8646F4",
+        dark: "#6D28D9",
+        "dark-2": "#5B21B6",
+        light: "#A78BFA",
+        "light-2": "#C4B5FD",
+        "light-3": "#DDD6FE",
+        "light-4": "#EDE9FE",
+        "light-5": "#F5F3FF",
+      },
+      pink: {
+        DEFAULT: "#D345F8",
+        dark: "#C814F6",
+        light: "#DF76FA",
+        "light-2": "#EAA7FC",
+        "light-3": "#F6D8FE",
+        "light-4": "#FCF1FE",
+      },
     },
     screens: {
       300: "300px",
@@ -198,7 +216,21 @@ module.exports = {
         999: "999",
         1: "1",
       },
+      boxShadow: {
+        button:
+          "inset 0px -6px 15px rgba(156, 178, 255, 0.25), inset 0px 6px 15px rgba(229, 156, 255, 0.25)",
+        dark: "0px 2px 4px rgba(11, 20, 51, 0.05), 0px 6px 24px rgba(11, 20, 51, 0.4)",
+        video:
+          "0px -3px 10px 0px rgba(0, 0, 0, 0.25) inset, 0px 26px 50px 0px rgba(18, 9, 36, 0.10)",
+        1: "0px 1px 2px rgba(166, 175, 195, 0.25)",
+        2: "0px 2px 4px rgba(148, 163, 184, 0.05), 0px 6px 24px rgba(235, 238, 251, 0.4)",
+        3: "0px 2px 16px rgba(13, 10, 44, 0.12)",
+        4: "0px -8px 18px rgba(13, 10, 44, 0.04), 0px 13px 40px rgba(13, 10, 44, 0.22)",
+        5: "0px -18px 38px rgba(85, 106, 235, 0.04), 0px 4px 10px rgba(85, 106, 235, 0.04), 0px 10px 30px rgba(85, 106, 235, 0.12)",
+        6: "0px 34px 26px rgba(13, 10, 44, 0.05), 0px 12px 34px rgba(13, 10, 44, 0.08)",
+      },
     },
   },
   plugins: [],
+  darkMode: "class",
 };

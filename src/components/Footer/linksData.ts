@@ -1,70 +1,55 @@
 import { FooterLink } from "@/types/footerLink";
+import siteConfig from '../../../siteConfig';
 
-
-export const companyLink: FooterLink[] = [
+export const legalLink: FooterLink[] = [
   {
-    id: 1,
-    title: "About",
-    href: "/about",
-    newTab: false,
-  },
-  {
-    id: 2,
-    title: "Contact",
-    href: "/contact",
+    id: 3,
+    title: "Terms of Service",
+    href: "terms",
     newTab: false,
   },
   {
     id: 4,
-    title: "Refunds",
-    href: "/refund",
-    newTab: false,
-  },
-  {
-    id: 16,
-    title: "Affiliate",
-    href: "/affiliate",
-    newTab: false,
-  },
-  {
-    id: 3,
-    title: "Help",
-    href: "/help",
-    newTab: false,
-  }
-  
-];
-
-export const legalLink: FooterLink[] = [
-  {
-    id: 5,
-    title: "Terms",
-    href: "/terms",
+    title: "Privacy Policy",
+    href: "privacy",
     newTab: false,
   },
   {
     id: 6,
-    title: "Privacy",
-    href: "/privacy",
-    newTab: false,
-  },
-  {
-    id: 7,
     title: "DMCA",
-    href: "/dmca",
+    href: "dmca",
     newTab: false,
   }
   
 ];
 
+export const supportsLink: FooterLink[] = [
+  {
+    id: 10,
+    title: "Help",
+    href: "help",
+    newTab: false,
+  },
+  {
+    id: 7,
+    title: "Contact",
+    href: "contact",
+    newTab: false,
+  },
+  {
+    id: 9,
+    title: "Refunds",
+    href: "refunds",
+    newTab: false,
+  }
+];
 
-export const toolLink: FooterLink[] = [
-  //{
-  //  id: 8,
-  //  title: "Blog",
-  //  href: "/blog",
-  //  newTab: false,
-  //},
-  
- 
+
+export const resourceLink: FooterLink[] = [
+  {
+    id: 14,
+    title: "AI Tattoo Generator",
+    href: "https://www.inkgen.ai/",
+    newTab: true,
+  }
 ];

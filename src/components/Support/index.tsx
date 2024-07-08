@@ -43,7 +43,7 @@ const Support = () => {
                       name="name"
                       placeholder="Name"
                       required
-                      className="rounded-lg border border-[#00000041] dark:border-white/[0.12] bg-[#ffffffb1] dark:bg-white/[0.05] w-full py-3 px-6 outline-none text-[black] dark:text-[white]"
+                      className="rounded-lg border border-[#00000041] dark:border-white/[0.12] bg-[#ffffffb1] dark:bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-none text-[black] dark:text-[white]"
                     />
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const Support = () => {
                       name="email"
                       placeholder="Email"
                       required
-                      className="rounded-lg border border-[#00000041] dark:border-white/[0.12] bg-[#ffffffb1] dark:bg-white/[0.05] w-full py-3 px-6 outline-none text-[black] dark:text-[white]"
+                      className="rounded-lg border border-[#00000041] dark:border-white/[0.12] bg-[#ffffffb1] dark:bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-none text-[black] dark:text-[white]"
                     />
                   </div>
                 </div>
@@ -79,15 +79,16 @@ const Support = () => {
                       placeholder="Type your message"
                       rows={6}
                       required
-                      className="rounded-lg border border-[#00000041] dark:border-white/[0.12] bg-[#ffffffb1] dark:bg-white/[0.05]  w-full py-5 px-6 outline-none text-[black] dark:text-[white]"
+                      className="rounded-lg border border-[#00000041] dark:border-white/[0.12] bg-[#ffffffb1] dark:bg-white/[0.05] focus:border-purple w-full py-5 px-6 outline-none text-[black] dark:text-[white]"
                     />
                   </div>
                 </div>
                 <div className="w-full px-4 xl:px-5">
                   <div className="text-center">
                     <button
+                      style={{"--main-color": siteConfig.buttonColor} as any}
                       type="submit"
-                      className="button-styling bg-[#8b3eff] inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
+                      className="button-styling inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
                     >
                       Send Message
                     </button>

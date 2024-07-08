@@ -1,9 +1,12 @@
+import SupportSection from "@/components/Support";
 import { Metadata } from "next";
 import siteConfig from '../../../../siteConfig';
 import PageTitle from "../../../components/Common/PageTitle";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const pageTitle = `Terms of Use`;
-const pageDescription = `Explore our Terms of USe to understand the rules and guidelines governing the use of our image manipulation tool.`;
+const pageTitle = `Terms of Service | ${siteConfig.siteName}`;
+const pageDescription = `Explore our Terms of Service to understand the rules and guidelines governing the use of our image manipulation tool.`;
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -11,52 +14,93 @@ export const metadata: Metadata = {
 };
 
 const TermsPage = () => {
+
   return (
     <>
+       <Header />
       <section className="pt-3 pb-25">
-        <div className="max-w-[1170px]  mx-auto text-[black]/80 dark:text-[white]/50 px-4 sm:px-8 xl:px-0 z-10 pt-25">
-          <PageTitle title="Terms of Use" paragraph={siteConfig.lastUpdated} />
+        <div className="max-w-[1170px]  mx-auto text-[black]/70 dark:text-[white]/50 px-4 sm:px-8 xl:px-0 z-10 pt-25">
+          <PageTitle title="Terms of Service" paragraph="Updated: February 19th, 2024" />
 
           <div className="mt-8">
-          <div className="content-container">
-            <p className="text-lg font-bold">Terms of Use</p>
-            <p className="mt-4">PLEASE READ THESE TERMS OF SERVICE ("AGREEMENT" OR "TERMS OF USE") CAREFULLY BEFORE USING THE SERVICES OFFERED BY INKGEN.AI. THIS AGREEMENT SETS FORTH THE LEGALLY BINDING TERMS AND CONDITIONS FOR YOUR USE OF THE INKGEN AI WEBSITE AND ALL RELATED SERVICES, INCLUDING, WITHOUT LIMITATION, ANY FEATURES, CONTENT, WEBSITES (INCLUDING WWW.INKGEN.AI) OR APPLICATIONS OFFERED FROM TIME TO TIME BY INKGEN AI IN CONNECTION THEREWITH (COLLECTIVELY "SERVICE(S)"). BY USING THE SERVICES IN ANY MANNER, YOU AGREE TO BE BOUND BY THIS AGREEMENT.</p>
+            <p className="text-lg font-bold">ATTENTION:</p>
+            <p className="mt-4">THIS IS A LEGALLY-BINDING CONTRACT.</p>
+            <p className="mt-4">PLEASE READ THESE TERMS OF SERVICE CAREFULLY BEFORE USING THE SERVICE. THIS AGREEMENT GOVERNS YOUR RELATIONSHIP WITH {siteConfig.siteName.charAt(0).toUpperCase() + siteConfig.siteName.slice(1)} AND USE OF THE SERVICES PROVIDED THROUGH THE WEBSITE. YOU MAY USE THE SERVICES PROVIDED THROUGH THE WEBSITE ONLY ON THE CONDITION THAT YOU ACCEPT ALL OF THE TERMS AND CONDITIONS CONTAINED HEREIN. USING THE SERVICES PROVIDED THROUGH THE WEBSITE INDICATES THAT YOU ACCEPT THESE TERMS OF SERVICE. IF YOU DO NOT ACCEPT THESE TERMS OF SERVICE, DO NOT USE THE WEBSITE OR SERVICES.</p>
+            <p className="mt-4">THESE TERMS OF SERVICE INCLUDES THE PRIVACY POLICY LOCATED AT <a href={siteConfig.siteURL + "/privacy"}>{siteConfig.siteURL}/privacy</a> WHICH IS INCORPORATED AND MADE A PART OF THESE TERMS OF SERVICE.</p>
+
             <h2 className="mt-8 text-2xl font-bold">Acceptance of Terms of Service</h2>
-            <p className="mt-4">The Service is offered subject to acceptance without modification of all of these Terms of Service and all other operating rules, policies and procedures that may be published from time to time in connection with the Services by InkGen AI. In addition, some services offered through the Service may be subject to additional terms and conditions promulgated by InkGen AI from time to time; your use of such services is subject to those additional terms and conditions, which are incorporated into these Terms of Service by this reference. InkGen AI may, in its sole discretion, refuse to offer the Service to any person or entity and change its eligibility criteria at any time. This provision is void where prohibited by law and the right to access the Service is revoked in such jurisdictions.</p>
-            <h2 className="mt-8 text-2xl font-bold">Modification of Terms of Service</h2>
-            <p className="mt-4">At its sole discretion, InkGen AI may modify or replace any of the Terms of Service, or change, suspend, or discontinue the Service (including without limitation, the availability of any feature, database, or content) at any time by posting a notice on the InkGen AI websites or Service or by sending you an email. InkGen AI may also impose limits on certain features and services or restrict your access to parts or all of the Service without notice or liability. It is your responsibility to check the Terms of Service periodically for changes. Your continued use of the Service following the posting of any changes to the Terms of Service constitutes acceptance of those changes.</p>
-            <h2 className="mt-8 text-2xl font-bold">Rules and Conduct</h2>
-            <p className="mt-4">As a condition of use, you promise not to use the Service for any purpose that is prohibited by the Terms of Service. For purposes of the Terms of Service, the term "Content" includes, without limitation, any information, data, text, photographs, videos, software, scripts, graphics, and interactive features generated, provided, or otherwise made accessible on or through the Service. By way of example, and not as a limitation, you shall not (and shall not permit any third party to) take any action (including contributing any Content) that: would constitute a violation of any applicable law, rule or regulation; infringes any intellectual property or other right of any other person or entity; is threatening, abusive, harassing, defamatory, libelous, deceptive, fraudulent, invasive of another's privacy, tortious, obscene, offensive, or profane; constitutes unauthorized or unsolicited advertising, junk or bulk e-mail; contains software viruses or any other similar computer codes, files, or programs; or impersonates any person or entity. Further, you shall not (directly or indirectly): (i) take any action that imposes or may impose an unreasonable or disproportionately large load on InkGen AI's (or its third party providers') infrastructure; or (ii) interfere or attempt to interfere with the proper working of the Service or any activities conducted on the Service; (iii) bypass any measures InkGen AI may use to prevent or restrict access to the Service (or parts thereof).</p>
-            <h2 className="mt-8 text-2xl font-bold">Trademarks and Patents</h2>
-            <p className="mt-4">All InkGen AI logos, marks and designations are trademarks or registered trademarks of InkGen AI. All other trademarks mentioned in this website are the property of their respective owners. The trademarks and logos displayed on this website may not be used without the prior written consent of InkGen AI or their respective owners. Portions, features and/or functionality of InkGen AI's products may be protected under InkGen AI patent applications or patents.</p>
-            <h2 className="mt-8 text-2xl font-bold">License</h2>
-            <p className="mt-4">InkGen AI grants you a limited, non-exclusive, non-transferable license to use the designs generated by our AI for personal use. Personal use means using the designs to get tattooed on your own body or for the purpose of designing a tattoo for a friend or family member.</p>
-            <h2 className="mt-8 text-2xl font-bold">Commercial Use</h2>
-            <p className="mt-4">If you intend to use the designs generated by InkGen AI for commercial purposes, including but not limited to designing tattoos for clients or use as inspiration in client discovery, you must purchase a subscription or pay for credits to use our service. Failure to do so constitutes a breach of these Terms of Use.</p>
-            <h2 className="mt-8 text-2xl font-bold">No Resale or Redistribution</h2>
-            <p className="mt-4">You are not permitted to resell or redistribute the designs generated by InkGen AI, whether for profit or not. All rights to the designs belong to InkGen AI and any unauthorized use of the designs will be considered a breach of these Terms of Use.</p>
-            <h2 className="mt-8 text-2xl font-bold">Ownership</h2>
-            <p className="mt-4">InkGen AI retains all rights, title, and interest in and to the designs generated by our AI. You acknowledge that the designs are the property of InkGen AI and that you have no right to use the designs other than as expressly set forth in these Terms of Use.</p>
-            <h2 className="mt-8 text-2xl font-bold">Termination</h2>
-            <p className="mt-4">InkGen AI may terminate your access to all or any part of the Service at any time if you fail to comply with these Terms of Service, which may result in the forfeiture and destruction of all information associated with your account. Further, either party may terminate the Services for any reason and at any time upon written notice. If you wish to terminate your account, you may do so by following the instructions on the Service. Any fees paid hereunder are non-refundable. Upon any termination, all rights and licenses granted to you in this Agreement shall immediately terminate, but all provisions hereof which by their nature should survive termination shall survive termination, including, without limitation, warranty disclaimers, indemnity and limitations of liability.</p>
-            <h2 className="mt-8 text-2xl font-bold">Indemnification</h2>
-            <p className="mt-4">You shall defend, indemnify, and hold harmless InkGen AI, its affiliates and each of its, and its affiliates employees, contractors, directors, suppliers and representatives from all liabilities, losses, claims, and expenses, including reasonable attorneys' fees, that arise from or relate to (i) your use or misuse of, or access to, the Service, or (ii) your violation of the Terms of Service or any applicable law, contract, policy, regulation or other obligation. InkGen AI reserves the right to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which event you will assist and cooperate with InkGen AI in connection therewith.</p>
-            <h2 className="mt-8 text-2xl font-bold">Limitation of Liability</h2>
-            <p className="mt-4">IN NO EVENT SHALL INKGEN AI OR ITS DIRECTORS, EMPLOYEES, AGENTS, PARTNERS, SUPPLIERS OR CONTENT PROVIDERS, BE LIABLE UNDER CONTRACT, TORT, STRICT LIABILITY, NEGLIGENCE OR ANY OTHER LEGAL OR EQUITABLE THEORY WITH RESPECT TO THE SERVICE (I) FOR ANY LOST PROFITS, DATA LOSS, COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, OR SPECIAL, INDIRECT, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND WHATSOEVER, OR SUBSTITUTE GOODS OR SERVICES, (II) FOR YOUR RELIANCE ON THE SERVICE OR (III) FOR ANY DIRECT DAMAGES IN EXCESS (IN THE AGGREGATE) OF THE FEES PAID BY YOU FOR THE SERVICE OR, IF GREATER, $500. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS AND EXCLUSIONS MAY NOT APPLY TO YOU.</p>
-            <h2 className="mt-8 text-2xl font-bold">Disclaimer</h2>
-            <p className="mt-4">ALL USE OF THE SERVICE AND ANY CONTENT IS UNDERTAKEN ENTIRELY AT YOUR OWN RISK. THE SERVICE (INCLUDING, WITHOUT LIMITATION, THE INKGEN AI WEB APP AND ANY CONTENT) IS PROVIDED "AS IS" AND "AS AVAILABLE" AND IS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, AND ANY WARRANTIES IMPLIED BY ANY COURSE OF PERFORMANCE OR USAGE OF TRADE, ALL OF WHICH ARE EXPRESSLY DISCLAIMED. SOME STATES DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.</p>
-            <h2 className="mt-8 text-2xl font-bold">Miscellaneous</h2>
-            <p className="mt-4">The Terms of Service are the entire agreement between you and InkGen AI AI with respect to the Service, and supersede all prior or contemporaneous communications and proposals (whether oral, written or electronic) between you and InkGen AI with respect to the Service. If any provision of the Terms of Service is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the Terms of Service will otherwise remain in full force and effect and enforceable. The failure of either party to exercise in any respect any right provided for herein shall not be deemed a waiver of any further rights hereunder. InkGen AI shall not be liable for any failure to perform its obligations hereunder due to any cause beyond InkGen AI's reasonable control. The Terms of Service are personal to you, and are not assignable or transferable by you except with InkGen AI's prior written consent. InkGen AI may assign, transfer or delegate any of its rights and obligations hereunder without consent. No agency, partnership, joint venture, or employment relationship is created as a result of the Terms of Service and neither party has any authority of any kind to bind the other in any respect. Except as otherwise provided herein, all notices under the Terms of Service will be in writing and will be deemed to have been duly given when received, if personally delivered or sent by certified or registered mail, return receipt requested; when receipt is electronically confirmed, if transmitted by facsimile or e-mail; or two days after it is sent, if sent for next day delivery by recognized overnight delivery service.</p>
-            <h2 className="mt-8 text-2xl font-bold">Governing Law</h2>
-            <p className="mt-4">These Terms of Use shall be governed by and construed in accordance with the laws of the jurisdiction in which InkGen AI is located, without giving effect to any choice of law or conflict of law provision or rule.</p>
+            <p className="mt-4">These Terms and Conditions outline the rules and regulations for the use of our Service and form the agreement between you (“You”) and {siteConfig.shortURL}. These Terms and Conditions establish the rights and obligations of all users concerning the Service.</p>
+            <p className="mt-4">Your access to and use of the Service is conditional upon your acceptance of and compliance with these Terms and Conditions. These Terms and to all visitors, users, and others who access or use the Service.</p>
+            <p className="mt-4">By accessing or using the Service, you agree to be bound by these Terms and Conditions. If you disagree with any part of these Terms and Conditions, you may not access the Service.</p>
+            <p className="mt-4">You represent that you are at least 18 years old. {siteConfig.shortURL} does not permit individuals under 18 years of age to use the Service.</p>
+            <p className="mt-4">Your access to and use of the Service is also conditional upon your acceptance of and compliance with the Privacy Policy of {siteConfig.shortURL}. Our Privacy Policy explains our policies and procedures on the collection, use, and disclosure of your personal information when you use the Service and informs you about your privacy rights and how the law protects you. Please read our Privacy Policy carefully before using our Service.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Warning: Strictly No Underage Content</h2>
+            <p className="mt-4">Generating, requesting, or sharing any content involving underage individuals, real or simulated, is strictly prohibited and will be logged and reported. This includes any form of child pornography, anime, fake news with intent to distribute, or violence/gore involving minors. Violation of this policy will result in a permanent ban and flagging of your account, and law enforcement will be notified as part of our strict compliance process.</p>
+            <p className="mt-4">{siteConfig.shortURL} will provide law enforcement server administrative information to prosecute cyber crimes. We have a zero-tolerance policy without warning.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Refund and Paid Services Policy</h2>
+            <p className="mt-4">Our Services may include certain services that are available via a one-time payment. The pricing for such Services will be as set out on the website.</p>
+            <p className="mt-4">All payments are non-refundable. Once made, payment transactions are final and not reversible.</p>
+            <p className="mt-4">We reserve the right to change the pricing for the Service at any time.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Content Policy</h2>
+            <p className="mt-4">You must adhere to our Content Policy when using our Service:.</p>
+            <p className="mt-4">“Content” refers to any material that you generate through the use of our Services. Your Content is not representative of or affiliated with {siteConfig.shortURL}, and we do not claim any ownership rights over your Content.</p>
+            <p className="mt-4">We do not store your Content. Once it has been delivered, it is promptly removed from our servers.</p>
+            <p className="mt-4">You must not generate, create, upload, or share any images or content that are illegal or could cause harm, including, but not limited to:</p>
+            
+            <ul className="list-disc mt-4 ml-5">
+               <li>Content promoting or expressing hate based on identity, using hateful symbols, negative stereotypes, or comparisons of certain groups to animals or objects.</li>
+               <li>Content mocking, threatening, or bullying individuals.</li>
+               <li>Content depicting violent acts, suffering, or humiliation of others.</li>
+               <li>Content promoting or encouraging suicide, self-harm, or eating disorders.</li>
+               <li>Content involving child abuse or exploitation, including images or videos of children, or any print or artwork that depicts or promotes child abuse.</li>
+               <li>Content depicting rape or domestic abuse.</li>
+               <li>Content involving the sale of illegal substances or products requiring permits or licenses, including pharmaceuticals, narcotics, pets, or firearms.</li>
+               <li>Content that is fraudulent or deceptive, including false information or attempts to exploit others.</li>
+               <li>Content involving false impersonation or identity theft.</li>
+               <li>Content depicting brutal fights, graphic injuries, or human death.</li>
+               <li>Content depicting graphic violence or promoting violence against others.</li>
+               <li>Content involving bestiality or sexual acts with animals..</li>
+               <li>Content depicting “loli”, “lolicon”, “shota”, or “shotacon” content, involving sexualized depictions of children.</li>
+               <li>Content based on real persons or copyrighted material, unless it’s yourself or you have obtained consent.</li>
+            </ul>
+            <p className="mt-4">Do not mislead your audience about AI involvement:</p>
+            <p className="mt-4">When sharing your work, proactively disclose AI involvement. You may not mislead others about the nature of the work, e.g., claiming the work was entirely human-generated or that it’s an unaltered photograph of a real event.</p>
+
+            <p className="mt-4">Respect the rights of others:</p>
+            <ul className="list-disc mt-4 ml-5">
+               <li>Do not upload/generate images of people without their consent.</li>
+               <li>Do not upload/generate images without holding appropriate usage rights.</li>
+               <li>Do not upload/generate images of public figures.</li>
+            </ul>
+            <p className="mt-4">Please report any suspected violations of these rules to {siteConfig.supportEmail}. We will investigate and take action accordingly, up to and including terminating the violating account.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Liability</h2>
+            <p className="mt-4">Neither of us (nor any of our affiliates, subsidiaries, contractors, licensors, officers, directors, agents, or employees (“Related Parties”)) will be liable for any indirect, incidental, consequential, punitive, special, or other similar damages, including loss of revenue, profits, data, benefits, or savings, whether or not due to the fault or negligence of the company or related parties, and regardless of whether either of us or our related parties have been advised of the possibility of such damages or losses.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Disclaimer of Warranties</h2>
+            <p className="mt-4">{siteConfig.shortURL}’s services are provided on an AS IS – WITH ALL FAULTS basis. You acknowledge that unexpected content may be generated through {siteConfig.shortURL}. Your use of our service is entirely at your own risk. We do not guarantee the availability of our service at any given time, or the reliability of our service when it is running. We do not guarantee the integrity of, or the continued availability of, files on our servers. Whether we make backups, and if so, whether restoration of those backups will be available to you, is at our discretion. {siteConfig.shortURL} DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION IMPLIED WARRANTIES OF FITNESS AND MERCHANTABILITY. NOTWITHSTANDING ANYTHING ELSE STATED IN THESE TERMS, AND IRRESPECTIVE OF WHETHER {siteConfig.shortURL} TAKES OR DOES NOT TAKE MEASURES TO REMOVE INAPPROPRIATE OR HARMFUL CONTENT FROM ITS SITE, {siteConfig.shortURL} HAS NO DUTY TO MONITOR ANY CONTENT ON ITS SITE. {siteConfig.shortURL} DOES NOT ASSUME RESPONSIBILITY FOR THE ACCURACY, APPROPRIATENESS, OR HARMLESSNESS OF ANY CONTENT APPEARING ON {siteConfig.shortURL} THAT IS NOT PRODUCED BY {siteConfig.shortURL}, INCLUDING BUT NOT LIMITED TO USER CONTENT, ADVERTISING CONTENT, USER GENERATED AI CONTENT, OR OTHERWISE.</p>
+            <p className="mt-4">Your sole remedy for the loss of any services and/or of any images or other data you may have stored on {siteConfig.shortURL}’s service is to discontinue your use of our service. {siteConfig.shortURL} WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF YOUR USE OF, OR INABILITY TO USE, {siteConfig.shortURL}’S SERVICES, EVEN IF {siteConfig.shortURL} HAS BEEN ADVISED OF OR REASONABLY SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES. NO CAUSE OF ACTION ARISING OUT OF YOUR USE OF {siteConfig.shortURL}’S SERVICES MAY BE BROUGHT MORE THAN ONE YEAR AFTER IT OCCURS.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Change</h2>
+            <p className="mt-4">We reserve the right to change or update these Terms at any time and without notice. All changes made to these terms are retroactive and apply to all users, content, and communications, overriding any previously agreed-upon terms.</p>
+
+            <h2 className="mt-8 text-2xl font-bold">Definitions</h2>
+            <p className="mt-4">“Us/we” refers to {siteConfig.shortURL} and its operators. “You” refers to any user that has accessed this site with any intention other than viewing this TOS. “Content” refers to any material that you generate through the use of our Services.</p>
+
             <h2 className="mt-8 text-2xl font-bold">Contact Us</h2>
-            <p className="mt-4">For questions regarding the Service, you can get in touch by emailing us at <a href="/contact">{siteConfig.supportEmail}</a></p>
-          </div>
+            <p className="mt-4">If you have any questions about these Terms and Conditions, you can contact our the company us by email: {siteConfig.supportEmail}</p>
+
+
           </div>
         </div>
       </section>
+      <Footer /> 
     </>
   );
 };
 
 export default TermsPage;
+

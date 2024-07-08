@@ -2,13 +2,15 @@
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFaq from "./SingleFaq";
+import faqData from "./faqData";
+import siteConfig from '../../../siteConfig';
 
-const Faq = ({ data }) => {
+const Faq = () => {
   const [activeFaq, setActiveFaq] = useState(1);
 
   const handleFaqToggle = (id: number) => {
     activeFaq === id ? setActiveFaq(0) : setActiveFaq(id);
-  };  
+  };
 
   return (
     <section className="relative overflow-hidden pb-17.5 lg:pb-22.5 xl:pb-27.5 pt-20 lg:pt-25">
@@ -22,7 +24,7 @@ const Faq = ({ data }) => {
         />
 
         <div className="wow fadeInUp">
-          {data.map((faq: any, key: number) => (
+          {faqData.map((faq: any, key: number) => (
             <SingleFaq
               key={key}
               faqData={{ ...faq, activeFaq, handleFaqToggle }}

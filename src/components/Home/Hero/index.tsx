@@ -2,44 +2,50 @@
 import Image from "next/image";
 import Link from "next/link";
 import siteConfig from "../../../../siteConfig";
+import { useState, useRef } from "react";
 import React, { useEffect } from 'react';
-import PageTitle from "../../../components/Common/PageTitle";
-import Button from '@/components/Common/Button';
+import UploadDropzone from '../../UploadDropzone/uploadDropzone';
 
-const Hero = () => {
+const Upload = () => {
+
+  const handleCTAClick = (files) => {
+    window.location.href = '/coupon'; // Replace with your desired URL
+};
 
   return (
-      <section className="pt-3 pb-25">
-        <div className="max-w-[1170px] text-[black]/70 dark:text-[white]/50 mx-auto px-4 sm:px-8 xl:px-0 z-10 pt-25">
-          <p className="text-center font-small text-sm mb-4">Create the perfect tattoo design with your personal tattoo artist</p>
-         
-          <h1 className="text-[black] text-center dark:text-[white] mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
-            AI Tattoo Generator
+    <section
+      id="home"
+      className="relative overflow-hidden z-10 pt-10 md:pt-25 xl:pt-30"
+    >
+
+      {/* <!-- Hero Content --> */}
+      <div className="mx-auto max-w-[900px] px-4 sm:px-8 xl:px-0 relative z-1">
+        <div className="text-center">
+          <h1 className="text-[black] dark:text-white mb-6 text-3xl font-extrabold sm:text-5xl xl:text-heading">
+            Watermark Remover
           </h1>
-
-          <div style={{ display: 'flex', justifyContent: 'center' }} className="mb-8">
-            <Image
-              src="/home/banner.png" // Replace with the path to your image
-              alt="Description of the image"
-              width={500} // Adjust width and height as needed
-              height={100}
-            />
-          </div>
-
-            <p className="max-w-[714px] text-center text-[black] dark:text-[white] mb-8 mx-auto font-small">If you have an idea for a tattoo but can't find the right design, let our AI generate tattoo ideas for you within seconds. Create the perfect design based on what you like, and get unlimited design options.</p>
+          <h2 className="max-w-[500px] mx-auto mb-9 font-small md:text-md">
+          Remove watermark online for free
+          </h2>
           
-          <Button
-            href="/design"
-            onClick={false}
-            style={{ }}
-            className=""
-          >
-            Try for free
-          </Button>
+          {/* Grouped Input and Button */}
+          <div className="flex justify-center items-center mb-4">
 
+          <a
+              onClick={handleCTAClick}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ "--main-color": siteConfig.buttonColor } as any}
+              className="button-styling inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
+            >
+              Try Nudify Now
+            </a>
+          </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center w-full"></div>
     </section>
   );
 };
 
-export default Hero;
+export default Upload;

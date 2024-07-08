@@ -1,171 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
-model Account {
-  id                 String  @id @default(cuid())
-  userId             String  @map("user_id")
-  type               String
-  provider           String
-  providerAccountId  String  @map("provider_account_id")
-  refresh_token      String? @db.Text
-  access_token       String? @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String? @db.Text
-  session_state      String?
- 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
- 
-  @@unique([provider, providerAccountId])
-  @@map("accounts")
-}
- 
-model Session {
-  id           String   @id @default(cuid())
-  sessionToken String   @unique @map("session_token")
-  userId       String   @map("user_id")
-  expires      DateTime
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
- 
-  @@map("sessions")
-}
- 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String   @unique
-  emailVerified DateTime? @map("email_verified")
-  image         String?
-  passwordHash  String?
-  createdAt     DateTime     @default(now()) @map(name: "created_at")
-  updatedAt     DateTime     @updatedAt @map(name: "updated_at")
-  designs       Design[]
-  collections   Collection[]
-  favorites     Favorite[]
-  accounts      Account[]
-  sessions      Session[]
- 
-  @@map("users")
-}
- 
-model VerificationToken {
-  identifier String
-  token      String
-  expires    DateTime
- 
-  @@unique([identifier, token])
-  @@map("verificationtokens")
+  id             String    @id @default(cuid())
+  name           String?
+  email          String?   @unique
+  hashedPassword String?
+  emailVerified  DateTime?
+  image          String?
+  createdAt      DateTime  @default(now()) @map(name: "created_at")
+  updatedAt      DateTime  @updatedAt @map(name: "updated_at")
+  accounts       account[]
 }
 
-model Design {
-  id          String       @default(cuid()) @id
-  userId      String
-  imageUrl    String
-  description String?
-  createdAt   DateTime     @default(now()) @map(name: "created_at")
-  updatedAt   DateTime     @updatedAt @map(name: "updated_at")
-  user        User         @relation(fields: [userId], references: [id])
-  ideas       DesignsIdeas[]
-  styles      DesignsStyles[]
-  favorites   Favorite[]
-  collections CollectionsDesign[]
+model account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
-  @@map(name: "designs")
-}
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-model Collection {
-  id        String               @default(cuid()) @id
-  userId    String
-  name      String
-  createdAt DateTime             @default(now()) @map(name: "created_at")
-  updatedAt DateTime             @updatedAt @map(name: "updated_at")
-  user      User                 @relation(fields: [userId], references: [id])
-  designs   CollectionsDesign[]
-
-  @@map(name: "collections")
-}
-
-model Favorite {
-  id        String     @default(cuid()) @id
-  userId    String
-  designId  String
-  createdAt DateTime   @default(now()) @map(name: "created_at")
-  user      User       @relation(fields: [userId], references: [id])
-  design    Design     @relation(fields: [designId], references: [id])
-
-  @@map(name: "favorites")
-}
-
-model Idea {
-  id          String       @id @default(cuid())
-  name        String       @unique
-  slug        String       @unique
-  image       String?
-  description String?
-  designs     DesignsIdeas[]
-  meaning     Meaning?
-
-  @@map(name: "ideas")
-}
-
-model Style {
-  id          String       @default(cuid()) @id
-  name        String       @unique
-  slug        String       @unique
-  description String?
-  image       String?
-  designs     DesignsStyles[]
-
-  @@map(name: "styles")
-}
-
-model DesignsIdeas {
-  id        String     @default(cuid()) @id
-  designId  String
-  ideaId    String
-  design    Design     @relation(fields: [designId], references: [id])
-  idea      Idea       @relation(fields: [ideaId], references: [id])
-
-  @@map(name: "designs_ideas")
-}
-
-model DesignsStyles {
-  id        String     @default(cuid()) @id
-  designId  String
-  styleId   String
-  design    Design     @relation(fields: [designId], references: [id])
-  style     Style      @relation(fields: [styleId], references: [id])
-
-  @@map(name: "designs_styles")
-}
-
-model CollectionsDesign {
-  id            String     @default(cuid()) @id
-  collectionId  String
-  designId      String
-  collection    Collection @relation(fields: [collectionId], references: [id])
-  design        Design     @relation(fields: [designId], references: [id])
-
-  @@map(name: "collections_designs")
-}
-
-model Meaning {
-  id          String     @default(cuid()) @id
-  ideaId      String     @unique
-  name        String
-  slug        String     @unique
-  description String
-  createdAt   DateTime   @default(now()) @map(name: "created_at")
-  updatedAt   DateTime   @updatedAt @map(name: "updated_at")
-  idea        Idea       @relation(fields: [ideaId], references: [id])
-
-  @@map(name: "meanings")
+  @@unique([provider, providerAccountId])
 }

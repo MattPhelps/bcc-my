@@ -41,7 +41,7 @@ const SinglePricing = ({ price, link, credits }: any) => {
         </h2>
 
         <p className="font-medium text-[black] place-content-center">
-          / month
+          = {credits} credits
         </p>
       </div>
 
@@ -69,7 +69,7 @@ const SinglePricing = ({ price, link, credits }: any) => {
         onClick={handleBuy}
         className="mt-11 mx-auto bg-blue-500 bg-[#8b3eff] flex px-12 py-3 items-center justify-center gap-1.5 font-medium text-[white] p-3 rounded-lg transition-all ease-in-out duration-300 relative hover:shadow-button"
       >
-        It's Free!
+        Buy Now
         <svg
           width="17"
           height="16"
