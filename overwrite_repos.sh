@@ -17,6 +17,7 @@ repos=(
     "https://github.com/mattphelps/bcc-uk"
     "https://github.com/mattphelps/bcc-de"
     "https://github.com/mattphelps/bcc-my"
+    "https://github.com/mattphelps/kartu-kredit"
 )
 
 # Function to update siteConfig
