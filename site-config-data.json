@@ -106,6 +106,33 @@
         "ccAffLink8": "", 
         "ccAffLink9": "", 
         "ccAffLink10": ""
+    },
+    "https://github.com/mattphelps/kartu-kredit": {
+        "gitHubRepo": "https://github.com/mattphelps/kartu-kredit",
+        "siteName": "Kartu Kredit Terbaik",
+        "siteURL": "https://kartukreditterbaik.id",
+        "shortURL": "kartukreditterbaik.id",
+        "siteTitle": "Kartu Kredit Terbaik",
+        "siteDescription": "",
+        "faviconPath": "/favicon.ico",
+        "emailFormLink": "https://formspree.io/f/xwkgkdjq",
+        "buttonColor": "#685cf4",
+        "buttonColor2": "#ff9900",
+        "GATag": "G-SE1FMF6DFD",
+        "country": "Indonesia",
+        "hrefLang": "en-ID",
+        "regionCode": "ID",
+        "supportEmail": "matt@leandme.com",
+        "ccAffLink1": "", 
+        "ccAffLink2": "", 
+        "ccAffLink3": "", 
+        "ccAffLink4": "", 
+        "ccAffLink5": "", 
+        "ccAffLink6": "", 
+        "ccAffLink7": "", 
+        "ccAffLink8": "", 
+        "ccAffLink9": "", 
+        "ccAffLink10": ""
     }
     
 }
